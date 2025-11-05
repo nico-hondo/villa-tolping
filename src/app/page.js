@@ -7,6 +7,7 @@ import Testi from '@/components/Testi';
 import Booking from '@/components/Booking';
 import Contact from '@/components/Contact';
 import Faq from '@/components/Faq';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Booking/>
       <Contact/>
       <Faq/>
+      <Footer />
     </> 
   );
 }

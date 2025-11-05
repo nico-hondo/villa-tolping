@@ -48,6 +48,12 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.bg-footer{
+  background-image: linear-gradient(rgba(24, 52, 47, 0.8)), url('/images/Footerbackground-overlay.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .bg-sectionColor{
   background-color: var(--color-base);
   background-size: cover;
