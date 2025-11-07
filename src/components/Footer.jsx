@@ -22,8 +22,8 @@ export default function Footer(){
     const phoneNumbercs2 = '6282210413051';
     const templateText = "Hai mimin, baru cek website nih. Mau tanya-tanya tentang Villa Tolping?";
     const encodeText = encodeURIComponent(templateText);
-    const whatsappLinkCSfirst = `whatsapp://send?phone=${phoneNumbercs}&text=${encodeURIComponent(encodeText)}`;
-    const whatsappLinkCSsecond = `whatsapp://send?phone=${phoneNumbercs2}&text=${encodeURIComponent(encodeText)}`;
+    const whatsappLinkCSfirst = `whatsapp://send?phone=${phoneNumbercs}&text=${encodeText}`;
+    const whatsappLinkCSsecond = `whatsapp://send?phone=${phoneNumbercs2}&text=${encodeText}`;
 
     //Configure Email Link
     const emailAddress = 'villatolping@gmail.com';
