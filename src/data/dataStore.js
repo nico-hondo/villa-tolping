@@ -2,18 +2,34 @@ export const testiData = [
     {
         id: 1,
         rating: 5,
-        description: "Tempat nyaman, Bersih, Suasana enak, Fasilitas lengkap, Pokoknya The Best.",
-        author: "Kristian Sendi",
-        src: "/images/gallery/Bedroom1.jpeg",
-        alt: "Gambar Testimonial"
+        description: "Tempat bersih, parkiran luas, kolam bersih, peralatan makan lengkap, penjaga villa sangat membantu, secara keseluruhan TOP BGT ♥️",
+        author: "Evi Oinike Sirait",
+        src: "/images/testi/evioiniketesti.jpg",
+        alt: "Gambar-Testimonial-Evi"
     },
     {
         id: 2,
         rating: 5,
-        description: "Tempat nyaman, Bersih, Suasana enak, Fasilitas lengkap, Pokoknya The Best.",
+        description: "Recommended! Akses tidak jauh dari pintu tol, parkirannya luas, area bermainnya luas, ada driving golf, setiap ruangan rapih, bersih dan minimalis, ada dapur besar dan dapur kecil, saung, peralatan makan semua lengkap. Mantap pokoknya!🫶",
+        author: "Elisabeth Yohana",
+        src: "/images/testi/elisabethtesti.jpg",
+        alt: "Gambar-Testimonial-elisabeth"
+    },
+    {
+        id: 3,
+        rating: 5,
+        description: "Tempat nyaman, bersih, suasana enak, fasilitas lengkap. Rekomen banget untuk kapasitas 20 orangan. Pokoknya the best.",
         author: "Kristian Sendi",
-        src: "/images/gallery/Bedroom1.jpeg",
-        alt: "Gambar Testimonial"
+        src: "/images/testi/kristiantesti.jpg",
+        alt: "Gambar-Testimonial-Kristian"
+    },
+    {
+        id: 4,
+        rating: 5,
+        description: "Villa Tolping cocok untuk acara retreat.",
+        author: "Togihon Rosalina",
+        src: "/images/testi/togihontesti.jpg",
+        alt: "Gambar-Testimonial-Togihon"
     },
 ];
 
