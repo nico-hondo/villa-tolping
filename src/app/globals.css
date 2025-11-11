@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
+
 
 :root {
   --background: #ffffff;
@@ -12,6 +15,8 @@
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
   --font-nunito-sans: 'Nunito Sans', sans-serif;
+  --font-montaga: 'Montaga', serif;
+  --font-cormorant-garamond: 'Cormorant Garamond';
   --color-base: #18342F;
   --color-nav: #322F2F;
   --color-badge: #93EEDE;
@@ -43,7 +48,8 @@
 }
 /* Background Image - Overlay */
 .bg-hero{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/Background-Image.png');
+  position: relative;
+  background-image: url('/images/Background-Image.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,10 +82,16 @@
 .font-nunito-sans{
   font-family: var(--font-nunito-sans);
 }
+.font-montaga{
+  font-family: var(--font-montaga);
+}
+.fotn-coromorant-garamond{
+  font-family: var(--font-cormorant-garamond);
+}
 
 /* Color Utility Classes */
-.text-Nav{
-  color: var(--color-nav);
+.imageEffect{
+  background-image: url('/images/Logo-Medium.png');
 }
 .badge-item{
   background-color: var(--color-badge);
