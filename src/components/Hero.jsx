@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 
 import Image from "next/image";
 
@@ -8,6 +9,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { CiCalendar } from "react-icons/ci";
 import { IoIosSend } from "react-icons/io";
 
+import { CalendarModal } from "../config/CalendarModal";
+
 export default function Hero(){
 
     // Configure Whatsapp Link
@@ -15,6 +18,44 @@ export default function Hero(){
     const templateText = "Hai mimin, baru cek website nih. Mau tanya-tanya tentang Villa Tolping?";
     const encodeText = encodeURIComponent(templateText);
     const whatsappLinkCSfirst = `whatsapp://send?phone=${phoneNumbercs}&text=${encodeText}`;
+
+    // Configure Calendar Custom
+    const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+    const [checkInDate, setCheckInDate] = useState(null);
+    const [checkOutDate, setCheckOutDate] = useState(null);
+
+    const formatDate = (date) => {
+        if(!date) return '';
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
+    };
+
+    const formatDateWA = (date) => {
+        if(!date) return '';
+        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'August', 'September', 'October', 'November', 'December'];
+        return `${date.getDate()} ${months[date.getMonth()]}`;
+    };
+    const calculateNights = () => {
+        if(!checkInDate && !checkOutDate) return 'Dates';
+        if(checkInDate && !checkOutDate) return 0;
+        const timeDiff = Math.abs(checkOutDate - checkInDate);
+        const diffDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+        return diffDays;
+    };
+    const nights = calculateNights();
+    
+    const handleDateSelect = (newCheckIn, newCheckOut) => {
+        setCheckInDate(newCheckIn);
+        setCheckOutDate(newCheckOut);
+    };
+
+
+    // Configure Whatsapp Link
+    const templateTextRefCalendar = `Hai mimin, baru cek website nih. Untuk tanggal ${formatDateWA(checkInDate)} - ${formatDateWA(checkOutDate)} Apakah sudah terisi? Sekalian nih, Mau tanya-tanya tentang Villa Tolping?`;
+    const encText = encodeURIComponent(templateTextRefCalendar);
+    const whatsappCSFirstRefCal = `whatsapp://send?phone=${phoneNumbercs}&text=${encText}`;
 
 
     return(
@@ -38,13 +79,23 @@ export default function Hero(){
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-row gap-2 items-center">
                                 <CiCalendar className="text-(--color-button) text-sm"/>
-                                <span className="text-sm text-gray-600 font-nunito-sans tracking-widest">1 Night</span>
+                                <span className="text-sm text-gray-600 font-nunito-sans tracking-widest">
+                                    {nights === 'Dates'
+                                    ? 'Dates'
+                                    :`${nights} NIGHT${nights !== 1 ? 'S' : ''}`}
+                                </span>
                             </div>
-                            <h3 className="text-2xl font-montaga font-medium text-black cursor-pointer">Wed, 12 Nov - Thu, 13 Nov</h3>
+                            
+                            <button 
+                            onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+                            className="text-left text-xl font-montaga font-medium text-black">
+                                {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : 'Select Dates'}
+                            
+                            </button>
                         </div>
                         <div className="w-full flex fle-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
-                            <span>Check Availability</span>
+                            <a href={whatsappCSFirstRefCal}>Check Availability</a>
                         </div>
                     </div>
 
@@ -54,6 +105,17 @@ export default function Hero(){
                             Book Now
                         </a>
                     </div>
+
+                    <CalendarModal
+                        isCalendarOpen={isCalendarOpen}
+                        onClose={() => setIsCalendarOpen(false)}
+                        checkInDate={checkInDate}
+                        checkOutDate={checkOutDate}
+                        onDateSelect={handleDateSelect}
+
+                        setCheckInDate={setCheckInDate}
+                        setCheckOutDate={setCheckOutDate}
+                    />
                 </div>
             </div>
         </section>
