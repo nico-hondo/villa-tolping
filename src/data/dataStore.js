@@ -64,7 +64,7 @@ export const faqs = [
 export const galleryData = {
     Outdoor: [
         { id: 1, src: "/images/gallery/Outdoor1.jpg", alt: "Exterior View" },
-        { id: 2, src: "/images/gallery/Outdoor2.JPG", alt: "Garden with Putting Green" },
+        { id: 2, src: "/images/gallery/OutdoorNightView.jpeg", alt: "Night View" },
         { id: 3, src: "/images/gallery/Outdoor3.JPG", alt: "Wide Parking Space" },
         { id: 4, src: "/images/gallery/Outdoor4.JPG", alt: "Spacious Area" },
     ],
