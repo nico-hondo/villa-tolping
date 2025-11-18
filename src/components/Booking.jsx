@@ -4,13 +4,16 @@ import { FaRegCalendarCheck } from "react-icons/fa6";
 import { MdPayment } from "react-icons/md";
 import { BsGift } from "react-icons/bs";
 
+import Badge from "./ui/Badge";
+
 
 export default function Booking(){
     return(
         <section className="w-full py-12 px-6 bg-(--secondary-background)">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
-                <div id="badgeGallery" className="badge-item w-25 font-plus font-semibold px-0 py-3 rounded-full justify-center items-center text-center">Booking
-                </div>
+                <Badge 
+                    badgeName="booking"
+                />
                 <div className="flex flex-col gap-4 text-center">
                     <h1 className="font-villatolping font-medium text-5xl text-black">How It Works</h1>
                     <p className="font-roboto text-sm font-medium text-gray-400">Simple step to secure your perfect villa getaway with flexible payments options</p>

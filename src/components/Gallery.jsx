@@ -8,6 +8,8 @@ import {MdNavigateBefore} from "react-icons/md";
 
 import { galleryData } from "@/data/dataStore";
 
+import Badge from "./ui/Badge";
+
 
 export default function Gallery() {
     const [activeCategory, setActiveCategory] = useState("Outdoor");
@@ -60,7 +62,9 @@ export default function Gallery() {
     return(
         <main className="w-full py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
-                <div id="badgeGallery" className="badge-item w-25 font-plus font-semibold px-0 py-3 rounded-full justify-center items-center text-center">Gallery</div>
+                <Badge 
+                    badgeName="Gallery"
+                />
                 <div className="flex flex-col gap-10 text-center">
                     <div className="flex flex-col text-center justify-center items-center gap-2">
                         <span className="w-full font-plus text-gray-500 text-xs font-medium">WELCOME TO VILLA TOLPING, YOUR PRIVATE HEAVEN OF COMFORT & NATURAL SERENITY</span>

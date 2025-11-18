@@ -14,6 +14,8 @@
   --font-roboto: 'Roboto', sans-serif;
   --font-nunito-sans: 'Nunito Sans', sans-serif;
   --font-montaga: 'Montaga', serif;
+  --font-cormorant-garamond: 'Cormorant Garamond', serif;
+  --font-questrial: 'Questrial', sans-serif;
   --color-base: #18342F;
   --color-nav: #322F2F;
   --color-badge: #93EEDE;
@@ -21,6 +23,29 @@
   --color-secondary: #9D9D9D;
   --color-tertier: #d9d9d9;
 }
+
+@font-face {
+  font-family: Swiss721;
+  src: url("/fonts/Swis721BT-Regular3.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Swiss721;
+  src: url("/fonts/Swiss721BT-BoldExtended.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Swiss721;
+  src: url("/fonts/Swiss721BT-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @theme inline {
   --color-background: var(--background);
@@ -82,8 +107,11 @@
 .font-montaga{
   font-family: var(--font-montaga);
 }
-.fotn-coromorant-garamond{
+.font-cormorant-garamond{
   font-family: var(--font-cormorant-garamond);
+}
+.font-questrial{
+  font-family: var(--font-questrial);
 }
 
 /* Color Utility Classes */
@@ -93,7 +121,6 @@
 .badge-item{
   background-color: var(--color-badge);
   color: var(--color-base);
-  text-transform: uppercase;
   font-size: 10px;
 }
 

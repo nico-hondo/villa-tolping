@@ -6,11 +6,11 @@ import Image from "next/image";
 import {Rating} from 'primereact/rating';
 import {MdNavigateNext} from "react-icons/md";
 import {MdNavigateBefore} from "react-icons/md";
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Navigation} from "swiper/modules";
 
 // import datastorage with ext .js
 import { testiData } from "@/data/dataStore"
+
+import Badge from "./ui/Badge";
 
 export default function Testi(){
 
@@ -51,9 +51,9 @@ export default function Testi(){
                     />
                 </div>
                 <div className="flex flex-col gap-6">
-                    <div id="badgeGallery" className="badge-item w-25 font-plus font-semibold px-0 py-3 rounded-full justify-center items-center text-center">
-                    Testimonials
-                    </div>  
+                    <Badge 
+                        badgeName="testimonials"
+                    />
                     <h1 className="font-villatolping text-5xl font-medium">Hear from Our <br /> Guests.</h1>
                     
                     <Rating value={currentData.rating} readOnly cancel={false} className="text-yellow-600 gap-1"/>

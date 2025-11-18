@@ -93,14 +93,14 @@ export default function Hero(){
                             
                             </button>
                         </div>
-                        <div className="w-full flex fle-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
+                        <a href={whatsappCSFirstRefCal} className="w-full flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
-                            <a href={whatsappCSFirstRefCal}>Check Availability</a>
-                        </div>
+                            <p>Check Availability</p>
+                        </a>
                     </div>
 
                     <div className="flex flex-col gap-8">
-                        <h1 className="font-villatolping font-medium text-4xl md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
+                        <h1 className="font-cormorant-garamond font-medium text-4xl md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
                         <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-(--color-badge) hover:text-(--color-nav) transition duration-300 text-sm">
                             Book Now
                         </a>
