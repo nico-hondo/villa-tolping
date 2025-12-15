@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 
@@ -57,6 +57,23 @@ export default function Hero(){
     const encText = encodeURIComponent(templateTextRefCalendar);
     const whatsappCSFirstRefCal = `whatsapp://send?phone=${phoneNumbercs}&text=${encText}`;
 
+    //Configure Scroll Effect
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handlingScroll = () => {
+            //check jika posisi scroll lebih dari 70px
+            if(window.scrollY > 100){
+                setIsScrolled(true);
+            }else{
+                setIsScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", handlingScroll);
+        return () => {
+            window.removeEventListener("scroll", handlingScroll);
+        }
+    }, []);
 
     return(
         <section className="w-full h-screen flex items-center justify-center relative">
@@ -66,15 +83,15 @@ export default function Hero(){
             {/* Overlay background - linear gradient -> to right */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-800/80 via-slate-800/50 to-transparent"></div>
 
-            <div className="w-full h-auto px-6 md:px-12 lg:px-20 z-10">
-                <div className="max-w-6xl mx-auto px-4 flex flex-col gap-48 relative">
-                    <div className="w-full bg-white py-4 px-8 grid grid-cols-3 gap-4 rounded-2xl shadow-lg">
-                        <div className="flex flex-col border-r border-dashed border-indigo-500 justify-center px-4">
+            <div className="w-full z-10 flex flex-col gap-48 justify-center pt-20">
+                <div className={`${isScrolled ? 'bg-white fixed top-20 left-0 w-full z-40' : 'w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl xl:mx-48 px-6'} transition-all duration-300`}>
+                    <div className={`bg-white ${isScrolled ? 'max-w-6xl mx-auto py-2 px-6 rounded-none' : 'w-full py-4 px-2 md:px-8 rounded-2xl shadow-lg'} grid grid-cols-2 md:grid-cols-3 gap-4 transition-all duration-700 ease-out`}>
+                        <div className="flex flex-col border-r border-dashed border-indigo-500 justify-center px-2 md:px-4">
                             <div className="flex flex-row gap-2 items-center">
                                 <IoLocationOutline className="text-(--color-button) text-sm"/>
                                 <span className="text-sm text-gray-600 font-nunito-sans tracking-widest">Plan Your Stay</span>
                             </div>
-                            <h3 className="text-2xl font-montaga font-medium text-gray-500">Pick your stay dates!</h3>
+                            <h3 className={`${isScrolled ? 'text-lg' : 'sm:text-md md:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>Pick your stay dates!</h3>
                         </div>
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-row gap-2 items-center">
@@ -88,23 +105,25 @@ export default function Hero(){
                             
                             <button 
                             onClick={() => setIsCalendarOpen(!isCalendarOpen)}
-                            className="text-left text-xl font-montaga font-medium text-black">
+                            className="text-left text-md md:text-xl font-montaga font-medium text-black">
                                 {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : 'Select Dates'}
                             
                             </button>
                         </div>
-                        <a href={whatsappCSFirstRefCal} className="w-full flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
+                        <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
                             <p>Check Availability</p>
                         </a>
                     </div>
-
+                </div>
+                <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
                     <div className="flex flex-col gap-8">
-                        <h1 className="font-cormorant-garamond font-medium text-4xl md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
+                        <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
                         <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-(--color-badge) hover:text-(--color-nav) transition duration-300 text-sm">
                             Book Now
                         </a>
                     </div>
+                </div>
 
                     <CalendarModal
                         isCalendarOpen={isCalendarOpen}
@@ -116,7 +135,6 @@ export default function Hero(){
                         setCheckInDate={setCheckInDate}
                         setCheckOutDate={setCheckOutDate}
                     />
-                </div>
             </div>
         </section>
     );
