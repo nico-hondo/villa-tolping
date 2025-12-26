@@ -1,13 +1,17 @@
 "use client";
+import { useState } from "react";
 
 import Image from "next/image";
 
 import Badge from "./ui/Badge";
 import HostVideoModal from "@/config/HostVideoModal";
 
-
+import { funcShowFull } from "@/app/interactions";
 
 export default function AboutUs(){
+
+    const [showFull, setShowFull] = useState(false);
+
     return(
         <section className="w-full py-12 px-6 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
@@ -17,11 +21,14 @@ export default function AboutUs(){
                 <div className="flex flex-col gap-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="flex flex-col gap-6">
-                            <h1 className="font-villatolping font-medium text-black text-5xl">Looking for the <br />Perfect Villa?</h1>
-                            <div className="pr-8">
-                                <span className="text-gray-700 text-md font-swiss">Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments. With a spacious yard, refreshing greenery, and comfortable facilities, our villa provides the perfect atmosphere for relaxing, celebrating, and enjoying time together. <br />
+                            <h1 className="font-villatolping font-medium text-black text-5xl text-center md:text-left">Looking for the <br />Perfect Villa?</h1>
+                            <div className="pr-0 md:pr-8 text-justify flex flex-col gap-2">
+                                <span className={`text-gray-700 text-md font-swiss ${showFull ? 'max-h-96' : 'max-h-12 line-clamp-3 md:max-h-12 md:line-clamp-3 lg:max-h-none lg:line-clamp-none'}`}>Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments. With a spacious yard, refreshing greenery, and comfortable facilities, our villa provides the perfect atmosphere for relaxing, celebrating, and enjoying time together. <br />
                                 Watch the video to see real guest experiences, then explore the complete amenities we provide below.
                                 </span>
+                                <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:flex lg:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
+                                {showFull ? 'Less...' : 'View More...'}
+                                 </button>
                             </div>
                             
                         </div>

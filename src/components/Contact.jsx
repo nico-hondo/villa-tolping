@@ -52,7 +52,7 @@ export default function Contact(){
                             &nbsp;Contact us via WhatsApp, email, or media social to get started.
                         </p>
                         <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
-                            {showFull ? 'Lebih Sedikit' : 'Selengkapnya...'}
+                            {showFull ? 'Less...' : 'View More...'}
                         </button>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
