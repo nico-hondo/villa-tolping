@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 
 import Image from "next/image";
 
@@ -12,6 +12,8 @@ import { IoIosSend } from "react-icons/io";
 import { CalendarModal } from "../config/CalendarModal";
 
 export default function Hero(){
+
+    // const elemenRef = useRef(null);
 
     // Configure Whatsapp Link
     const phoneNumbercs = '6282114667061';
@@ -33,10 +35,19 @@ export default function Hero(){
 
     const formatDateWA = (date) => {
         if(!date) return '';
-        const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'August', 'September', 'October', 'November', 'December'];
-        return `${date.getDate()} ${months[date.getMonth()]}`;
+
+        //Format untuk mengambil tanggal dan bulan saja
+        // const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        // const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'August', 'September', 'October', 'November', 'December'];
+        // return `${date.getDate()} ${months[date.getMonth()]}`;
+
+        return date.toLocaleDateString('id-ID', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+        });
     };
+
     const calculateNights = () => {
         if(!checkInDate && !checkOutDate) return 'Dates';
         if(checkInDate && !checkOutDate) return 0;
@@ -44,7 +55,18 @@ export default function Hero(){
         const diffDays = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
         return diffDays;
     };
+
     const nights = calculateNights();
+
+    // useEffect(() => {
+    //     //Make font weight to bold or maybe change color, when user has selected dates > 0 nights
+    //     if(elemenRef.current){
+    //         if(calculateNights() > 0 && calculateNights() !== 'Dates'){
+    //             elemenRef.current.classList.remove('text-gray-600');
+    //             elemenRef.current.classList.add('text-black', 'font-bold');
+    //         }
+    //     }
+    // }, []);
     
     const handleDateSelect = (newCheckIn, newCheckOut) => {
         setCheckInDate(newCheckIn);
@@ -85,18 +107,19 @@ export default function Hero(){
 
             <div className="w-full z-10 flex flex-col gap-48 justify-center pt-20">
                 <div className={`${isScrolled ? 'bg-white fixed top-20 left-0 w-full z-40' : 'w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl xl:mx-48 px-6'} transition-all duration-300`}>
-                    <div className={`bg-white ${isScrolled ? 'max-w-6xl mx-auto py-2 px-6 rounded-none' : 'w-full py-4 px-2 md:px-8 rounded-2xl shadow-lg'} grid grid-cols-2 md:grid-cols-3 gap-4 transition-all duration-700 ease-out`}>
+                    <div className={`bg-white ${isScrolled ? 'max-w-6xl mx-auto py-2 px-2 rounded-none' : 'w-full py-4 px-2 md:px-8 rounded-2xl shadow-lg'} grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 transition-all duration-700 ease-out`}>
                         <div className="flex flex-col border-r border-dashed border-indigo-500 justify-center px-2 md:px-4">
                             <div className="flex flex-row gap-2 items-center">
-                                <IoLocationOutline className="text-(--color-button) text-sm"/>
-                                <span className="text-sm text-gray-600 font-nunito-sans tracking-widest">Plan Your Stay</span>
+                                <IoLocationOutline className="text-(--color-button) text-sm md:text-lg lg:text-xl"/>
+                                <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} text-gray-600 font-montaga`}>Plan Your Stay</span>
                             </div>
-                            <h3 className={`${isScrolled ? 'text-lg' : 'sm:text-md md:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>Pick your stay dates!</h3>
+                            <h3 className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>Pick your stay dates!</h3>
                         </div>
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-row gap-2 items-center">
-                                <CiCalendar className="text-(--color-button) text-sm"/>
-                                <span className="text-sm text-gray-600 font-nunito-sans tracking-widest">
+                                <CiCalendar className="text-(--color-button) text-sm md:text-lg lg:text-lg"/>
+                                <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} ${nights > 0 ? 'text-gray-800 font-semibold' : 'text-gray-600'
+                                } font-montaga`}>
                                     {nights === 'Dates'
                                     ? 'Dates'
                                     :`${nights} NIGHT${nights !== 1 ? 'S' : ''}`}
@@ -105,7 +128,7 @@ export default function Hero(){
                             
                             <button 
                             onClick={() => setIsCalendarOpen(!isCalendarOpen)}
-                            className="text-left text-md md:text-xl font-montaga font-medium text-black">
+                            className="text-left text-md md:text-xl font-montaga font-medium text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300">
                                 {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : 'Select Dates'}
                             
                             </button>
