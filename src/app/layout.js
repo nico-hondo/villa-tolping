@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
+
+import FAB from "@/components/FABWhatsapp";
+import { Fa0 } from "react-icons/fa6";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <FAB/>
       </body>
     </html>
   );

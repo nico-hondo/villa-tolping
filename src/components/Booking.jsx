@@ -9,7 +9,7 @@ import Badge from "./ui/Badge";
 
 export default function Booking(){
     return(
-        <section className="w-full py-12 px-6 bg-(--secondary-background)">
+        <section id="booking" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-(--secondary-background)">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
                     badgeName="booking"

@@ -13,7 +13,7 @@ export default function AboutUs(){
     const [showFull, setShowFull] = useState(false);
 
     return(
-        <section className="w-full py-12 px-6 bg-white">
+        <section id="about" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge
                     badgeName="About Us"

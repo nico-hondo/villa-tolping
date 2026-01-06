@@ -98,7 +98,7 @@ export default function Hero(){
     }, []);
 
     return(
-        <section className="w-full h-screen flex items-center justify-center relative">
+        <section id="home" className="w-full h-screen flex items-center justify-center relative">
 
             <Image src={HeroImage} alt="Hero-Image" className="w-full h-full inset-0 object-cover absolute"/>
 
@@ -128,7 +128,7 @@ export default function Hero(){
                             
                             <button 
                             onClick={() => setIsCalendarOpen(!isCalendarOpen)}
-                            className="text-left text-md md:text-xl font-montaga font-medium text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300">
+                            className={` ${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'}  font-montaga font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
                                 {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : 'Select Dates'}
                             
                             </button>
@@ -142,7 +142,7 @@ export default function Hero(){
                 <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
                     <div className="flex flex-col gap-8">
                         <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
-                        <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-(--color-badge) hover:text-(--color-nav) transition duration-300 text-sm">
+                        <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 text-sm">
                             Book Now
                         </a>
                     </div>

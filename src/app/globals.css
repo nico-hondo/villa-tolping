@@ -3,6 +3,9 @@
 @import 'swiper/css/navigation';
 @import 'swiper/css/pagination';
 
+html{
+  scroll-behavior: smooth;
+}
 
 :root {
   --background: #ffffff;
@@ -22,6 +25,8 @@
   --color-button: #1acfae;
   --color-secondary: #9D9D9D;
   --color-tertier: #d9d9d9;
+  
+  --nav-height: 80px;
 }
 
 @font-face {

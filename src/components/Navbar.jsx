@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect} from "react";
+import { useState, useEffect, useRef} from "react";
 
 import Image from "next/image";
 import logoVillaBl from "@/../public/images/Logo-Medium.png";
@@ -10,11 +10,55 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
+const navItems = [
+        { label: "Home", href: "home" },
+        { label: "Gallery", href: "gallery" },
+        { label: "About us", href: "about" },
+        { label: "Testimonial", href: "testimonial" },
+        { label: "Booking", href: "booking" },
+        { label: "Contact", href: "contact" },
+    ];
+
 export default function Navbar() {
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [isClick, setIsClickFlex] = useState(false);
+    const [activeSection, setActiveSection] = useState("home");
+
+    const navRef = useRef(null);
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if(!section) return;
+
+        section.scrollIntoView({ 
+            behavior: "smooth", 
+            block: "start"
+        });
+    }
+
+    useEffect(() => {
+        const sections = navItems.map(item=> document.getElementById(item.href)).filter(Boolean);
+
+        const observer = new IntersectionObserver(
+            entries =>{
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        setActiveSection(entry.target.id);
+                    }
+                })
+            },
+            {
+                root: null,
+                threshold: 0.6 //60% of the section is visible
+            }
+        );
+
+        sections.forEach(section => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const handlingScroll = () =>{
@@ -33,9 +77,20 @@ export default function Navbar() {
         }
     }, []);
 
+    useEffect(() => {
+        
+        const nav = document.getElementById("navbar");
+        if(nav){
+            document.documentElement.style.setProperty(
+                '--nav-height', 
+                `${nav.offsetHeight}px`
+            );
+        }
+    }, []);
+
     return (
         <>
-            <header className={`w-full h-20 fixed top-0 left-0 z-50 transition-all duration-700
+            <header id="navbar" className={`w-full h-20 fixed top-0 left-0 z-50 transition-all duration-700
             ${
                 isScrolled ? "bg-white shadow-md text-black" : "bg-(--color-button)/70 md:bg-black/50 backdrop-blur-lg text-black hover:bg-white hover:text-black"
             }`}
@@ -52,15 +107,33 @@ export default function Navbar() {
                             : 
                             isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Logo" width={150} height={50} className="transition-all duration-700"/>
                     </a>
-                    <nav className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
-                        <a href="#" className="px-3 py-3">Home</a>
-                        <a href="#" className="px-3 py-3">Gallery</a>
-                        <a href="#" className="px-3 py-3">About us</a>
-                        <a href="#" className="px-3 py-3">Testimonial</a>
-                        <a href="#" className="px-3 py-3">Booking</a>
-                        <a href="#" className="px-3 py-3">Contact</a>
-                        <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300
-                        ${isScrolled ? 'border-gray-800' : isHovered ? 'border-gray-800':'border-gray-300'}`}>
+                    <nav ref={navRef} id="navbar" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
+                        {navItems.map(item => {
+                            const isActive = activeSection === item.href;
+                            return(
+                                <li key={item.href} className="relative decoration-none list-none inline-block mx-2 py-2">
+                                    <button
+                                        type="button"
+                                        onClick={() => scrollToSection(item.href)}
+                                        className={`px-1 text-sm tracking-wide ${isActive ? 'text-teal-500' : ''} cursor-pointer`}
+                                    >
+                                        {item.label}
+                                    </button>
+
+                                    {/* Underline Animation */}
+                                    <span 
+                                        className={`absolute left-0 -bottom-1 h-[2px] w-full bg-teal-500
+                                        ${isActive ?
+                                            "scale-x-100 opacity-100"
+                                            : "scale-x-0 opacity-0"
+                                        }
+                                           origin-center 
+                                            `}
+                                    />
+                                </li>
+                            );
+                        })}
+                        <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
                             <FaGlobeAmericas size={18} className="inline mr-2" />
                             Eng
                         </a>

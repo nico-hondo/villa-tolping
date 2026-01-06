@@ -36,7 +36,7 @@ export default function Contact(){
         },2500);
     },[])
     return(
-        <section className="w-full py-12 bg-white">
+        <section id="contact" className="w-full scroll-mt-[var(--nav-height)] scroll-mt-[var(--nav-height)] py-12 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-6 px-6">
                 <Badge 
                     badgeName="contact us"

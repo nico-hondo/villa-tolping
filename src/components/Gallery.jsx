@@ -93,7 +93,7 @@ export default function Gallery() {
     }, [swiperRef, prevRef, nextRef]);
 
     return(
-        <main className="w-full py-12 px-6">
+        <main id="gallery" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
                     badgeName="Gallery"
