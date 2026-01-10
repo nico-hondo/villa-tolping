@@ -12,11 +12,17 @@ import {funcShowFull} from "../app/interactions";
 
 import Badge from "./ui/Badge";
 
+import { useLanguage } from "../context/LanguageContext";
+
 export default function Contact(){
 
     const [showFull, setShowFull] = useState(false);
 
     const [isLoading, setIsLoading] = useState(true);
+
+    const { translations } = useLanguage();
+
+    const contact = translations.contact;
 
     //Configure Map Link
     const mapSrc = "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3962.6859548388575!2d106.8845775!3d-6.6857683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c99cf8450b13%3A0xd348f840f2e4fbbc!2sVilla%20Tolping!5e0!3m2!1sid!2sid!4v1762357240015!5m2!1sid!2sid";
@@ -39,17 +45,17 @@ export default function Contact(){
         <section id="contact" className="w-full scroll-mt-[var(--nav-height)] scroll-mt-[var(--nav-height)] py-12 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-6 px-6">
                 <Badge 
-                    badgeName="contact us"
+                    badgeName={contact.badge}
                 />
                 <div className="flex flex-col gap-8 justify-center item-center">
                     <div className="flex flex-col gap-4 text-center">
                         <h1 className="font-villatolping font-medium text-5xl text-black">
-                            Get in touch with us!
+                            {contact.title}
                         </h1>
                         <p className={`font-roboto font-medium text-gray-400 text-sm transition-all duration-700 ease-in-out overflow-hidden ${showFull ? 'max-h-96' :'max-h-12 line-clamp-2'}`}>
-                            For inquiries, or to schedule a service, reach out to us today. Our dedicated team is here to assist you every step of the way.
+                            {contact.description}
                             <br className="hidden md:flex"/>
-                            &nbsp;Contact us via WhatsApp, email, or media social to get started.
+                            &nbsp;{contact.descriptioncont}
                         </p>
                         <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
                             {showFull ? 'Less...' : 'View More...'}
@@ -72,12 +78,12 @@ export default function Contact(){
                                         <FaLocationDot size={24} className="text-(--color-base) font-bold"/>
                                     </div>
                                     <div className="flex flex-col gap-1 justify-center">
-                                        <span className="font-plus font-medium text-gray-400 text-sm">Address</span>
+                                        <span className="font-plus font-medium text-gray-400 text-sm">{contact.listContact.address}</span>
                                         <p className="max-w-full text-black text-sm">Jl. Kp. Balandongan, Ciherang, <br />Megamendung, Indonesia, West Java</p>
                                     </div>
                                 </a>
                                 <div className="max-w-full flex flex-col border border-gray-300 rounded-3xl justify-center items-center gap-4 p-6 hover:shadow-lg transition-shadow duration-300">
-                                    <span className="font-plus font-medium text-gray-400 text-sm">Follow us on</span>
+                                    <span className="font-plus font-medium text-gray-400 text-sm">{contact.listContact.follow}</span>
                                     <div className="flex flex-row gap-6">
                                         <a href="https://www.instagram.com/villatolping/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10">
                                             <FaInstagram size={18} className="text-(--color-base) font-bold"/>

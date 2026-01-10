@@ -1,0 +1,188 @@
+{
+
+    "navbar":{
+        "home" : "Beranda",
+        "gallery" : "Galeri",
+        "about" : "Tentang Kami",
+        "testimonials" : "Testimoni",
+        "booking" : "Pemesanan",
+        "contact" : "Kontak"
+    },
+    "hero": {
+        "title": "Temukan Ketenangan di",
+        "titlecont": "Villa Tolping",
+        "cta": "Pesan Sekarang",
+
+        "bookingmodal": {
+            "direction":{
+                "label": "Rencanakan Kehidupan Anda",
+                "helper": "Pilih tanggal kunjungan Anda"
+            },
+            "pickdates":{
+                "label": "Hari",
+                "placeholder": "Pilih Hari"
+            },
+            "cta": "Cek Ketersediaan"
+        }
+    },
+    "gallery":{
+        "badge": "Galeri",
+        "opening": "Selamat datang di villa tolping. surga pribadi untuk kenyamanan & ketenangan alami",
+        "title": "Dimana Relaksasi Bertemu dengan Kemewahan"
+    },
+    "marketing":{
+        "title": "Siap Merasakan Surga?",
+        "subtitle": "Pesan villa impianmu hari ini dan ciptakan kenangan tak terlupakan.",
+        "cta": "Pesan Sekarang"
+    },
+    "about":{
+        "badge": "Tentang Kami",
+        "title": "Mencari Villa yang Tepat",
+        "titlecont": "Buat Kamu?",
+        "description": "Tersembunyi di tengah ketenangan alam, Villa Tolping hadir sebagai tempat yang hangat dan nyaman untuk keluarga, teman, atau kelompok berkumpul dan merajut momen berharga. Dengan halaman yang luas, pepohonan yang sejuk, serta fasilitas yang memadai, villa kami menawarkan suasana sempurna untuk bersantai, merayakan sesuatu, atau sekadar menikmati kebersamaan.",
+        "descriptioncont": "Tonton videonya untuk melihat pengalaman tamu kami secara langsung, lalu jelajahi fasilitas lengkap yang kami sediakan di bawah ini.",
+        "titlefacilities": "Jelajahi fasilitas yang tersedia di villa kami",
+        "facilities": {
+            "pool": "Kolam Renang",
+            "wifi": "Wifi",
+            "kitchen": "Dapur Lengkap",
+            "parking": "Tersedia Area Parkir yang luas",
+            "ac": "AC"
+        }
+    },
+    "testimonials": {
+        "badge": "Testimoni",
+        "title": "Dengar dari Para Tamu Kami"
+    },
+    "booking": {
+        "badge": "Pemesanan",
+        "title": "Alur Pemesanan Villa",
+        "subtitle": "Langkah mudah untuk mengamankan liburan villa impianmu, dengan opsi pembayaran yang fleksibel.",
+        "steps": {
+            "step1": {
+                "step": "Langkah 1",
+                "title": "Jelajahi Galeri Kami",
+                "description": "Telusuri foto-foto menawan villa kami untuk membayangkan pengalaman menginapmu."
+            },
+            "step2": {
+                "step": "Langkah 2",
+                "title": "Tanya via Kontak",
+                "description": "Hubungi kami untuk pertanyaan apa pun. Tim kami siap membantu."
+            },
+            "step3": {
+                "step": "Langkah 3",
+                "title": "Konfirmasi Pemesanan",
+                "description": "Pilih tanggal, bayar uang muka (DP), dan amankan reservasimu."
+            },
+            "step4": {
+                "step": "Langkah 4",
+                "title": "Pembayaran",
+                "description": "Lakukan pembayaran sisanya dengan mudah sebelum hari check-in."
+            },
+            "step5": {
+                "step": "Langkah 5",
+                "title": "Nikmati Pengalaman Menginap Anda",
+                "description": "Nikmati dan ciptakan kenangan yang tak terlupakan."
+            }
+        }
+    },
+    "contact": {
+        "badge": "Hubungi Kami",
+        "title": "Yuk, Ngobrol dengan Kami!",
+        "description": "Untuk pertanyaan atau penjadwalan layanan, jangan ragu menghubungi kami hari ini juga. Tim kami yang sigap siap mendampingi Anda dari awal hingga akhir.",
+        "descriptioncont": "Silahkan hubungi kami via WhatsApp, email, atau media sosial untuk memulai.",
+        "listContact": {
+            "email" : "Email",
+            "address": "Alamat",
+            "follow": "Ikuti Perjalanan Kami"
+        }
+    },
+    "propertyDetail": {
+        "title": "Detail Properti",
+        "modalst": {
+            "title": "Informasi Villa",
+            "information": {
+                "in": {
+                    "title": "Check-In",
+                    "time": "14:00 WIB"
+                },
+                "out": {
+                    "title": "Check-Out",
+                    "time": "12:00 WIB"
+                },
+                "capacity": {
+                    "title": "Kapasitas Maksimal",
+                    "people": "20 Orang"
+                },
+                "age": {
+                    "title": "Usia Minimal Check-in",
+                    "age": "Semua usia diperbolehkan"
+                },
+                "smoke":{
+                    "title" : "Villa Bebas Asap Rokok"
+                },
+                "parking":{
+                    "title": "Parkir",
+                    "info": "Parkir di Lokasi(Gratis)"
+                },
+                "pets":{
+                    "title": "Kebijakan Hewan Peliharaan",
+                    "info": "Diizinkan dengan Persetujuan Terlebih Dahulu"
+                }
+            }
+        },
+        "modalnd": {
+            "title": "Informasi Umum",
+            "information": {
+                "pay": {
+                    "title": "Metode Pembayaran",
+                    "info": "Kami menerima transfer bank dan dompet digital untuk kemudahan Anda."
+                },
+                "service": {
+                    "title" : "Layanan",
+                    "info": "Bahasa yang dikuasai oleh staf: ",
+                    "infolang": "Indonesian, English"
+                }
+            }
+        }
+    },
+    "faq": {
+        "title": "Pertanyaan yang Sering Ditanyakan",
+        "subtitle": "Jawaban cepat untuk pertanyaan umum seputar ",
+        "subtitlecont": "Villa Tolping",
+        "accordion": {
+            "q1": {
+                "question": "Bagaimana cara saya memesan penginapan di vila tersebut?",
+                "answer": "Mudah sekali — cukup klik tombol WhatsApp, dan Anda akan terhubung langsung dengan layanan pelanggan villa kami. Tim ramah kami akan memandu Anda melakukan proses pemesanan, mengkonfirmasi ketersediaan, dan membantu menjawab semua pertanyaan — secara real-time untuk pengalaman yang lancar dan personal."
+            },
+            "q2": {
+                "question": "Apakah diperlukan DP (uang muka)?",
+                "answer": "Ya, diperlukan uang muka untuk mengamankan reservasi Anda. Minimum DP adalah 50% dari harga sewa villa. Sisa pembayaran harus dilakukan sebelum hari check-in."
+            },
+            "q3": {
+                "question": "Fasilitas apa saja yang tersedia?",
+                "answer": "Villa dilengkapi kolam renang pribadi, dapur, WiFi, AC, dan halaman depan yang luas. Layanan tambahan tersedia berdasarkan permintaan."
+            },
+            "q4": {
+                "question": "Apakah villa cocok untuk keluarga atau grup besar?",
+                "answer": "Sangat cocok! Villa kami ideal untuk keluarga dan grup, dengan ruangan yang lapang dan area bersama untuk menghabiskan waktu yang berkualitas."
+            },
+            "q5": {
+                "question": "Bisakah saya membatalkan atau mengubah jadwal booking?",
+                "answer": "Ya, pembatalan dan penjadwalan ulang dimungkinkan sesuai kebijakan kami. Silakan hubungi layanan pelanggan untuk detailnya."
+            }
+        }
+    },
+    "footer": {
+        "description": "Dikelola dengan penuh perhatian tulus, villa kami dirancang ",
+        "descriptioncont": "agar setiap tamu merasa seperti di rumah — di mana kenyamanan dan ",
+        "descriptionlast": "ketenangan Anda adalah prioritas utama kami.",
+        "follow": "Ikuti kami untuk info terbaru:",
+        "titlelink": "Tautan Cepat",
+        "contactinfo": {
+            "title" : "Informasi Kontak",
+            "wa1" : "Chat dengan Admin Villa Tolping",
+            "wa2" : "Tanya Informasi & Ketersediaan Villa"
+        }
+    }
+}

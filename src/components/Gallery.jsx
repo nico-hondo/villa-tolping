@@ -8,6 +8,8 @@ import {MdNavigateBefore} from "react-icons/md";
 
 import { galleryData } from "@/data/dataStore";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 import Badge from "./ui/Badge";
 
 
@@ -25,6 +27,8 @@ export default function Gallery() {
 
     //Kenapa dikurang 2 ? Karena perbedaan jumlah data dengan jumlah pagination. So currentIndex ini value nya akan bertambah seiring function onClick dijalankan. Jadi currentIndex di lastslide itu mempunyai nilai 2, sedangkan jumlah data gambar terdapat 4, jikalau dikurang 1 maka isLastSlide tidak valid, sehingga dikurangi 2 agar match dengan jumlah currentIndex
     
+    const {translations} = useLanguage();
+    const galleryTranslations = translations.gallery;
 
     // cek condition size device
     useEffect(() => {
@@ -96,12 +100,12 @@ export default function Gallery() {
         <main id="gallery" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
-                    badgeName="Gallery"
+                    badgeName= {galleryTranslations.badge}
                 />
                 <div className="flex flex-col gap-10 text-center">
                     <div className="flex flex-col text-center justify-center items-center gap-2">
-                        <span className="w-full font-plus text-gray-500 text-xs font-medium">WELCOME TO VILLA TOLPING, YOUR PRIVATE HEAVEN OF COMFORT & NATURAL SERENITY</span>
-                        <h1 className="font-villatolping font-medium text-black text-5xl pb-8">Where Relaxation Meets Nature</h1>
+                        <span className="w-full font-plus text-gray-500 text-xs font-medium uppercase">{galleryTranslations.opening}</span>
+                        <h1 className="font-villatolping font-medium text-black text-5xl pb-8">{galleryTranslations.title}</h1>
                     </div>
                     <div className="flex flex-col gap-6">
                         {/* Filter buttons */}

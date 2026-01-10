@@ -10,14 +10,9 @@ import { FaGlobeAmericas } from "react-icons/fa";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 
-const navItems = [
-        { label: "Home", href: "home" },
-        { label: "Gallery", href: "gallery" },
-        { label: "About us", href: "about" },
-        { label: "Testimonial", href: "testimonial" },
-        { label: "Booking", href: "booking" },
-        { label: "Contact", href: "contact" },
-    ];
+import { useLanguage } from "@/context/LanguageContext";
+
+import LanguageSwitcher from "@/config/LanguageSwitcher";
 
 export default function Navbar() {
 
@@ -27,6 +22,17 @@ export default function Navbar() {
     const [activeSection, setActiveSection] = useState("home");
 
     const navRef = useRef(null);
+
+    const { call } = useLanguage();
+
+    const navItems = [
+        { label: "Home", href: "home" },
+        { label: "Gallery", href: "gallery" },
+        { label: "About us", href: "about" },
+        { label: "Testimonial", href: "testimonial" },
+        { label: "Booking", href: "booking" },
+        { label: "Contact", href: "contact" },
+    ];
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -128,15 +134,16 @@ export default function Navbar() {
                                             : "scale-x-0 opacity-0"
                                         }
                                            origin-center 
-                                            `}
+                                        `}
                                     />
                                 </li>
                             );
                         })}
-                        <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
+                        {/* <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
                             <FaGlobeAmericas size={18} className="inline mr-2" />
                             Eng
-                        </a>
+                        </a> */}
+                        <LanguageSwitcher isHovered={isHovered} isScrolled={isScrolled}/>
                     </nav>
                     <button onClick={() => setIsClickFlex(true)} className={`md:hidden text-xl ${isScrolled ? 'text-gray-500' : 'text-gray-200'} hover:text-teal-400 transition-colors duration-300`}>
                         <FaBars/>

@@ -8,23 +8,28 @@ import HostVideoModal from "@/config/HostVideoModal";
 
 import { funcShowFull } from "@/app/interactions";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function AboutUs(){
 
     const [showFull, setShowFull] = useState(false);
+
+    const { translations } = useLanguage();
+    const about = translations.about;
 
     return(
         <section id="about" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge
-                    badgeName="About Us"
+                    badgeName={about.badge}
                 />
                 <div className="flex flex-col gap-16">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <div className="flex flex-col gap-6">
-                            <h1 className="font-villatolping font-medium text-black text-5xl text-center md:text-left">Looking for the <br />Perfect Villa?</h1>
+                            <h1 className="font-villatolping font-medium text-black text-5xl text-center md:text-left">{about.title}<br />{about.titlecont}</h1>
                             <div className="pr-0 md:pr-8 text-justify flex flex-col gap-2">
-                                <span className={`text-gray-700 text-md font-swiss ${showFull ? 'max-h-96' : 'max-h-12 line-clamp-3 md:max-h-12 md:line-clamp-3 lg:max-h-none lg:line-clamp-none'}`}>Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments. With a spacious yard, refreshing greenery, and comfortable facilities, our villa provides the perfect atmosphere for relaxing, celebrating, and enjoying time together. <br />
-                                Watch the video to see real guest experiences, then explore the complete amenities we provide below.
+                                <span className={`text-gray-700 text-md font-swiss ${showFull ? 'max-h-96' : 'max-h-12 line-clamp-3 md:max-h-12 md:line-clamp-3 lg:max-h-none lg:line-clamp-none'}`}>{about.description}<br />
+                                {about.descriptioncont}
                                 </span>
                                 <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:flex lg:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
                                 {showFull ? 'Less...' : 'View More...'}
@@ -53,28 +58,30 @@ export default function AboutUs(){
                             thumbnailTime={2}
                         />
                     </div>
+
+
                     <div className="flex flex-col gap-8 justify-center items-center text-center">
-                        <h1 className="w-full font-villatolping text-3xl text-black">Discover the facilities available at our villa.</h1>
+                        <h1 className="w-full font-villatolping text-3xl text-black">{about.titlefacilities}</h1>
                         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                             <div className="flex flex-col justify-center items-center border shadow-sm rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/swimpool-icon.png" alt="Icon Swimming Pool" width={70} height={70} loading="lazy"/>
-                                <p className="text-gray-600 text-sm font-semibold">Swimming Pool</p>
+                                <p className="text-gray-600 text-sm font-semibold">{about.facilities.pool}</p>
                             </div>
                             <div className="flex flex-col justify-center items-center border shadow-md rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/wifi-icon.png" alt="Icon Wifi" width={60} height={60} loading="lazy"/>
-                                <p className="text-gray-600 text-sm font-semibold">Wifi</p>
+                                <p className="text-gray-600 text-sm font-semibold">{about.facilities.wifi}</p>
                             </div>
                             <div className="flex flex-col justify-center items-center border shadow-md rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/kitchenset-icon.png" alt="Icon Kitchen Set" width={60} height={60} loading="lazy"/>
-                                <p className="text-gray-600 text-sm font-semibold">Kitchen Set</p>
+                                <p className="text-gray-600 text-sm font-semibold">{about.facilities.kitchen}</p>
                             </div>
                             <div className="flex flex-col justify-center items-center text-center border shadow-md rounded-xl w-full h-35 gap-2 px-6">
                                 <Image src="/images/icons/parking-icon.png" alt="Icon Parking" width={60} height={60} loading="lazy"/>
-                                <p className="text-gray-600 text-sm font-semibold">Spacious on-site parking available</p>
+                                <p className="text-gray-600 text-sm font-semibold">{about.facilities.parking}</p>
                             </div>
                             <div className="flex flex-col col-span-2 md:col-span-1 justify-center items-center border shadow-md rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/snowflake-icon.png" alt="Icon AC" width={60} height={60} loading="lazy"/>
-                                <p className="text-gray-600 text-sm font-semibold">AC</p>
+                                <p className="text-gray-600 text-sm font-semibold">{about.facilities.ac}</p>
                             </div>
                         </div>
                     </div>

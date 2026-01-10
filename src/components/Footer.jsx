@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import logovilla from "@/../public/images/Logo-Large-White.png";
 
@@ -13,9 +12,20 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Footer(){
 
     const tahunSekarang = new Date().getFullYear();
+
+    const { translations } = useLanguage();
+
+    // Destructure navbar translations
+    const navbar = translations.navbar;
+
+    // Destructure footer translations
+    const footer = translations.footer;
+    const footContact = footer.contactinfo;
 
     // Configure Whatsapp Link
     const phoneNumbercs = '6282114667061';
@@ -39,9 +49,9 @@ export default function Footer(){
                     <Image src={logovilla} alt="Villa-Tolping Logo" width={230} height={230}/>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 text-white font-plus">
                         <div className="flex flex-col gap-10">
-                            <p className="text-sm/7 font-medium">"Personally managed with genuine care, our villa is designed <br className="hidden md:block"/> to make every guest feel at home — Where your comfort and <br className="hidden md:block"/> relaxation are our true priority."</p>
+                            <p className="text-sm/7 font-medium">"{footer.description} <br className="hidden md:block"/>{footer.descriptioncont} <br className="hidden md:block"/> {footer.descriptionlast}"</p>
                             <div className="flex flex-col gap-4">
-                                <p className="text-sm font-medium">Follow us for more informations:</p>
+                                <p className="text-sm font-medium">{footer.follow}</p>
                                 <div className="flex flex-row gap-6">
                                     <a href="https://www.instagram.com/villatolping/" target="_blank" rel="noopener noreferrer">
                                         <FaInstagram size={20} className="text-(--color-badge) md:text-white hover:text-(--color-badge) transition-colors duration-300 cursor-pointer"/>
@@ -60,30 +70,30 @@ export default function Footer(){
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div className="flex flex-col gap-6 hidden md:flex">
-                                <h3 className="font-semibold text-md">Quick Links</h3>
+                                <h3 className="font-semibold text-md">{footer.titlelink}</h3>
                                 <div className="flex flex-col gap-3 pr-8">
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Home</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Gallery</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">About Us</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Testimonial</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Booking</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Contact us</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.home}</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.gallery}</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.about}</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.testimonials}</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.booking}</a>
+                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.contact}</a>
                                 </div>
                             </div>
                             <div className="col-span-2 flex flex-col gap-6">
-                                <h3 className="font-semibold text-md">Contact Information</h3>
+                                <h3 className="font-semibold text-md">{footContact.title}</h3>
                                 <div className="flex flex-col gap-3">
                                     <a href={whatsappLinkCSfirst} className="flex flex-row gap-4 items-center">
                                         <FaWhatsapp size={24} className="text-(--color-badge)"/>
                                         <p className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">
-                                            Chat with Villa Tolping Admin
+                                            {footContact.wa1}
                                         </p>
                                     </a>
                                     <hr className="border-gray-400"/>
                                     <a href={whatsappLinkCSsecond} className="flex flex-row gap-4 items-center">
                                         <FaWhatsapp size={24} className="text-(--color-badge)"/>
                                         <p className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">
-                                            Ask About Villa info & Availability
+                                            {footContact.wa2}
                                         </p>
                                     </a>
                                     <hr className="border-gray-400"/>

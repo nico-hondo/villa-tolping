@@ -8,9 +8,22 @@ import { FaChevronUp } from "react-icons/fa";
 import { useAccordion } from "@/app/interactions";
 import { useState } from "react";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Faq(){
     const   {toggleIndex, isActive} = useAccordion();
     const   [open, setOpen] = useState(null);
+
+    const { translations } = useLanguage();
+
+    // property detail translations
+    const faqPD = translations.propertyDetail;
+    const pdInfost = faqPD.modalst.information;
+    const pdInfond = faqPD.modalnd.information;
+
+    // faq translations
+    const faq = translations.faq;
+    const accord = faq.accordion;
 
     const toggle = (i) => {
         setOpen(open == i ? null : i);
@@ -21,12 +34,12 @@ export default function Faq(){
             <div className="max-w-6xl mx-auto flex flex-col gap-16">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-6 text-center">
-                        <h1 className="font-villatolping font-medium text-3xl text-black"> Property Details</h1>
+                        <h1 className="font-villatolping font-medium text-3xl text-black">{faqPD.title}</h1>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">
                             <div onClick={() => toggle(1)} className="flex flex-row justify-between cursor-pointer">
-                                <h1 className="font-plus text-black text-sm font-medium">Villa Information</h1>
+                                <h1 className="font-plus text-black text-sm font-medium">{faqPD.modalst.title}</h1>
                                 <div className="flex-shrink-0 transition-transform duration-300">
                                     {open == 1 ?(
                                         <FaChevronUp size={16} className="text-(--color-base) font-bold"/>
@@ -42,44 +55,51 @@ export default function Faq(){
                                         <div className="flex flex-col gap-2 font-swiss text-gray-600 font-light text-sm">
                                             <span className="flex flex-row gap-2">
                                                 <p>
-                                                    Check-in:
+                                                    {pdInfost.in.title}:
                                                 </p>
                                                 <p className="text-black">
-                                                    2:00 pm
+                                                    {pdInfost.in.time}
                                                 </p>
                                             </span>
                                             <span className="flex flex-row gap-2">
                                                 <p>
-                                                    Check-out:
+                                                    {pdInfost.out.title}:
                                                 </p>
                                                 <p className="text-black">
-                                                    12:00 pm
+                                                    {pdInfost.out.time}
                                                 </p>
                                             </span>
                                             <span className="flex flex-row gap-2">
-                                                <p>Minimum Age to Check-in:</p>
-                                                <p className="text-black">All Ages Welcome </p>
+                                                <p>{pdInfost.age.title}:</p>
+                                                <p className="text-black">{pdInfost.age.age}</p>
                                             </span>
                                             <span className="text-black">
-                                                Smoke Free Property
+                                                {pdInfost.smoke.title}
                                             </span>
                                         </div>
                                         <hr />
                                         <div className="flex flex-col gap-2 text-sm">
-                                            <h5 className="text-black">Pet Policy</h5>
-                                            <span className="text-gray-600">Pets Not Allowed</span>
+                                            <h5 className="text-black">{pdInfost.pets.title}</h5>
+                                            <span className="text-gray-600">{pdInfost.pets.info}</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <h5 className="text-black">Parking</h5>
-                                        <span className="text-gray-600">Complimentary On-Site Parking</span>
+                                        <div className="flex flex-col gap-2">
+                                            <h5 className="text-black">{pdInfost.parking.title}:</h5>
+                                            <span className="text-gray-600">{pdInfost.parking.info}</span>
+                                        </div>
+
+                                        <div className="flex flex-col gap-2">
+                                            <h5 className="text-black">{pdInfost.capacity.title}:</h5>
+                                            <span className="text-gray-600">{pdInfost.capacity.people}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">
                             <div onClick={() => toggle(2)} className="flex flex-row justify-between cursor-pointer">
-                                <h1 className="font-plus text-black text-sm font-medium">General Information</h1>
+                                <h1 className="font-plus text-black text-sm font-medium">{faqPD.modalnd.title}</h1>
                                 <div className="flex-shrink-0 transition-transform duration-300">
                                     {open == 2 ?(
                                         <FaChevronUp size={16} className="text-(--color-base) font-bold"/>
@@ -92,14 +112,14 @@ export default function Faq(){
                                 <hr  className="mt-4"/>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <h5 className="text-black">Policies and Payments</h5>
-                                        <span className="flex flex-row gap-2 text-gray-600">
-                                            Accepts: Cash, Credit Cards
+                                        <h5 className="text-black">{pdInfond.pay.title}</h5>
+                                        <span className="flex flex-row gap-2 text-gray-600 font-semibold">
+                                            {pdInfond.pay.info}
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <h5 className="text-black">Service</h5>
-                                        <span className="text-gray-600">Languages Spoken by staff: <br />Indonesian, English</span>
+                                        <h5 className="text-black">{pdInfond.service.title}</h5>
+                                        <span className="text-gray-600">{pdInfond.service.info} <br />{pdInfond.service.infolang}</span>
                                     </div>
                                 </div>
                             </div>
@@ -108,8 +128,8 @@ export default function Faq(){
                 </div>
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-4 text-center">
-                        <h1 className="font-villatolping font-medium text-3xl text-black">Frequently Asked Questions</h1>
-                        <p className="font-roboto text-sm font-medium text-gray-400 ">Quick answer to common questions about <br className="block md:hidden"/> Tolping Villa</p>
+                        <h1 className="font-villatolping font-medium text-3xl text-black">{faq.title}</h1>
+                        <p className="font-roboto text-sm font-medium text-gray-400 ">{faq.subtitle} <br className="block md:hidden"/> {faq.subtitlecont}</p>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         {faqs.map((item) => ( 

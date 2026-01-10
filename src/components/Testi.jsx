@@ -12,10 +12,15 @@ import { testiData } from "@/data/dataStore"
 
 import Badge from "./ui/Badge";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Testi(){
 
     //Ganti data testi tanpa library external seperti swiper
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    const { translations } = useLanguage();
+    const testi = translations.testimonials;
 
     //initiate indexing check before change slide
     const isFirstSlide = currentIndex === 0;
@@ -52,10 +57,10 @@ export default function Testi(){
                 </div>
                 <div className="flex flex-col gap-6">
                     <Badge 
-                        badgeName="testimonials"
+                        badgeName={testi.badge}
                     />
-                    <h1 className="font-villatolping text-5xl font-medium">Hear from Our <br /> Guests.</h1>
-                    
+                    <h1 className="font-villatolping text-5xl font-medium">{testi.title}</h1>
+
                     <Rating value={currentData.rating} readOnly cancel={false} className="text-yellow-600 gap-1"/>
 
                     <div className="min-h-25 md:min-h-20">

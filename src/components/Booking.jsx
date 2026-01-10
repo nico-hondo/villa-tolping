@@ -1,3 +1,5 @@
+"use client";
+
 import { IoMdImages } from "react-icons/io";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaRegCalendarCheck } from "react-icons/fa6";
@@ -6,24 +8,30 @@ import { BsGift } from "react-icons/bs";
 
 import Badge from "./ui/Badge";
 
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Booking(){
+
+    const { translations } = useLanguage();
+    const booking = translations.booking;
+    const steps = booking.steps;
+
     return(
         <section id="booking" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-(--secondary-background)">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
-                    badgeName="booking"
+                    badgeName={booking.badge}
                 />
                 <div className="flex flex-col gap-4 text-center">
-                    <h1 className="font-villatolping font-medium text-5xl text-black">How It Works</h1>
-                    <p className="font-roboto text-sm font-medium text-gray-400">Simple step to secure your perfect villa getaway with flexible payments options</p>
+                    <h1 className="font-villatolping font-medium text-5xl text-black">{booking.title}</h1>
+                    <p className="font-roboto text-sm font-medium text-gray-400">{booking.subtitle}</p>
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
-                                    Step 1
+                                    {steps.step1.step}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-6 text-center justify-center items-center pt-6">
@@ -31,15 +39,15 @@ export default function Booking(){
                                     <IoMdImages size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">Explore Our Gallery</h4>
-                                    <p className="text-gray-400 text-sm px-6">Browse through stunning images of our villa to envision your stay</p>
+                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step1.title}</h4>
+                                    <p className="text-gray-400 text-sm px-6">{steps.step1.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
-                                    Step 2
+                                    {steps.step2.step}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-6 text-center justify-center items-center pt-6">
@@ -47,15 +55,15 @@ export default function Booking(){
                                     <IoLogoWhatsapp size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">Inquire via Contact</h4>
-                                    <p className="text-gray-400 text-sm px-6">React out to us with any questions. We're here to help</p>
+                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step2.title}</h4>
+                                    <p className="text-gray-400 text-sm px-6">{steps.step2.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
-                                    Step 3
+                                    {steps.step3.step}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-6 text-center justify-center items-center pt-6">
@@ -63,8 +71,8 @@ export default function Booking(){
                                     <FaRegCalendarCheck size={22} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">Confirm Booking</h4>
-                                    <p className="text-gray-400 text-sm px-6">Choose your date, pay a down payment, and secure your reservation.</p>
+                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step3.title}</h4>
+                                    <p className="text-gray-400 text-sm px-6">{steps.step3.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +81,7 @@ export default function Booking(){
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
-                                    Step 4
+                                    {steps.step4.step}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-6 text-center justify-center items-center pt-6">
@@ -81,15 +89,15 @@ export default function Booking(){
                                     <MdPayment size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">Repayment</h4>
-                                    <p className="text-gray-400 text-sm px-6">Complete the remaining payment easily before your stay.</p>
+                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step4.title}</h4>
+                                    <p className="text-gray-400 text-sm px-6">{steps.step4.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
-                                    Step 5
+                                    {steps.step5.step}
                                 </span>
                             </div>
                             <div className="flex flex-col gap-6 text-center justify-center items-center pt-6">
@@ -97,8 +105,8 @@ export default function Booking(){
                                     <BsGift size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">Enjoy Your Stay</h4>
-                                    <p className="text-gray-400 text-sm px-6">Relax and create unforgettable memories.</p>
+                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step5.title}</h4>
+                                    <p className="text-gray-400 text-sm px-6">{steps.step5.description}</p>
                                 </div>
                             </div>
                         </div>

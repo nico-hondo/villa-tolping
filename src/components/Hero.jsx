@@ -11,6 +11,8 @@ import { IoIosSend } from "react-icons/io";
 
 import { CalendarModal } from "../config/CalendarModal";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 export default function Hero(){
 
     // const elemenRef = useRef(null);
@@ -25,6 +27,9 @@ export default function Hero(){
     const [isCalendarOpen, setIsCalendarOpen] = useState(false);
     const [checkInDate, setCheckInDate] = useState(null);
     const [checkOutDate, setCheckOutDate] = useState(null);
+
+    const { translations } = useLanguage();
+    const booking = translations.hero.bookingmodal;
 
     const formatDate = (date) => {
         if(!date) return '';
@@ -111,9 +116,9 @@ export default function Hero(){
                         <div className="flex flex-col border-r border-dashed border-indigo-500 justify-center px-2 md:px-4">
                             <div className="flex flex-row gap-2 items-center">
                                 <IoLocationOutline className="text-(--color-button) text-sm md:text-lg lg:text-xl"/>
-                                <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} text-gray-600 font-montaga`}>Plan Your Stay</span>
+                                <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} text-gray-600 font-montaga`}>{booking.direction.label}</span>
                             </div>
-                            <h3 className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>Pick your stay dates!</h3>
+                            <h3 className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>{booking.direction.helper}</h3>
                         </div>
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-row gap-2 items-center">
@@ -121,7 +126,7 @@ export default function Hero(){
                                 <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} ${nights > 0 ? 'text-gray-800 font-semibold' : 'text-gray-600'
                                 } font-montaga`}>
                                     {nights === 'Dates'
-                                    ? 'Dates'
+                                    ? booking.pickdates.label
                                     :`${nights} NIGHT${nights !== 1 ? 'S' : ''}`}
                                 </span>
                             </div>
@@ -129,21 +134,21 @@ export default function Hero(){
                             <button 
                             onClick={() => setIsCalendarOpen(!isCalendarOpen)}
                             className={` ${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'}  font-montaga font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
-                                {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : 'Select Dates'}
+                                {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
                             
                             </button>
                         </div>
                         <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
-                            <p>Check Availability</p>
+                            <p>{booking.cta}</p>
                         </a>
                     </div>
                 </div>
                 <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
                     <div className="flex flex-col gap-8">
-                        <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">Discover Serenity at <br/> Tolping's Villa</h1>
+                        <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">{translations.hero.title} <br/> {translations.hero.titlecont}</h1>
                         <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 text-sm">
-                            Book Now
+                            {translations.hero.cta}
                         </a>
                     </div>
                 </div>

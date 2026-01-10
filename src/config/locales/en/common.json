@@ -1,0 +1,187 @@
+{
+    "navbar":{
+        "home" : "Home",
+        "gallery" : "Gallery",
+        "about" : "About us",
+        "testimonials" : "Testimonials",
+        "booking" : "Booking",
+        "contact" : "Contact Us"
+    },
+    "hero": {
+        "title": "Discover Serenity at",
+        "titlecont": "Tolping's Villa",
+        "cta": "Book Now",
+
+        "bookingmodal": {
+            "direction":{
+                "label": "Plan Your Stay",
+                "helper": "Pick your stay dates"
+            },
+            "pickdates":{
+                "label": "Dates",
+                "placeholder": "Select Dates"
+            },
+            "cta": "Check Availability"
+        }
+    },
+    "gallery":{
+        "badge": "Gallery",
+        "opening": "Welcome to villa tolping. your private heaven of comfort & natural serenity",
+        "title": "Where Relaxation Meets Luxury"
+    },
+    "marketing":{
+        "title": "Ready to Experience Paradise?",
+        "subtitle": "Book your dream villa today and create unforgettable memories.",
+        "cta": "Reserve Now"
+    },
+    "about":{
+        "badge": "About Us",
+        "title": "Looking for the",
+        "titlecont": "Perfect Villa?",
+        "description": "Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments. With a spacious yard, refreshing greenery, and comfortable facilities, our villa provides the perfect atmosphere for relaxing, celebrating, and enjoying time together.",
+        "descriptioncont": "Watch the video to see real guest experiences, then explore the complete amenities we provide below.",
+        "titlefacilities": "Discover the facilities available at our villa",
+        "facilities": {
+            "pool": "Swimming Pool",
+            "wifi": "Wifi",
+            "kitchen": "Kitchen-Set",
+            "parking": "Spacious on-site parking available",
+            "ac": "AC"
+        }
+    },
+    "testimonials": {
+        "badge": "Testimonials",
+        "title": "Hear from Our Guests"
+    },
+    "booking": {
+        "badge": "Booking",
+        "title": "How It Works",
+        "subtitle": "Simple step to secure your perfect villa getaway with flexible payments options",
+        "steps": {
+            "step1": {
+                "step": "Step 1",
+                "title": "Explore Our Gallery",
+                "description": "Browse thorugh stunning images of our villa to envision your stay."
+            },
+            "step2": {
+                "step": "Step 2",
+                "title": "Inquire via Contact",
+                "description": "React out to us with any questions. We're here to help."
+            },
+            "step3": {
+                "step": "Step 3",
+                "title": "Confirm Booking",
+                "description": "Choose your date, pay a down payment, and secure your reservation."
+            },
+            "step4": {
+                "step": "Step 4",
+                "title": "Repayment",
+                "description": "Complete the remaining payment easily before your stay."
+            },
+            "step5": {
+                "step": "Step 5",
+                "title": "Enjoy Your Stay",
+                "description": "Relax and create unforgettable memories."
+            }
+        }
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title": "Get in Touch with Us",
+        "description": "For inquiries, or to schedule a service, reach out to us today. Our dedicated team is here to assist you every step of the way.",
+        "descriptioncont": "Contact us via WhatsApp, email, or media social to get started.",
+        "listContact": {
+            "email" : "Email",
+            "address": "Address",
+            "follow": "Follow us on"
+        }
+    },
+    "propertyDetail": {
+        "title": "Property Details",
+        "modalst": {
+            "title": "Villa Information",
+            "information": {
+                "in": {
+                    "title": "Check-In",
+                    "time": "2:00 PM"
+                },
+                "out": {
+                    "title": "Check-Out",
+                    "time": "12:00 PM"
+                },
+                "capacity": {
+                    "title": "Max Capacity",
+                    "people": "20 People"
+                },
+                "age": {
+                    "title": "Minimum Age to Check-in",
+                    "age": "All Ages Welcome"
+                },
+                "smoke":{
+                    "title" : "Smoke Free Property"
+                },
+                "parking":{
+                    "title": "Parking",
+                    "info": "Complimentary On-Site Parking"
+                },
+                "pets":{
+                    "title": "Pet Policy",
+                    "info": "Pets Allowed with Prior Approval"
+                }
+            }
+        },
+        "modalnd": {
+            "title": "General Information",
+            "information": {
+                "pay": {
+                    "title": "Payment Methods",
+                    "info": "We accept bank transfers and major e-wallets for your convenience."
+                },
+                "service": {
+                    "title" : "Service",
+                    "info": "Languages Spoken by staff: ",
+                    "infolang": "Indonesian, English"
+                }
+            }
+        }
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Quick answer to common questions about ",
+        "subtitlecont": "Tolping Villa",
+        "accordion": {
+            "q1": {
+                "question": "How do I book stay at the villa?",
+                "answer": "Booking your stay is simple — just click the WhatsApp button, and you’ll be instantly connected with our villa’s customer service. Our friendly team will guide you through the booking process, confirm availability, and help with any details you need — all in real time for a smooth and personal experience."
+            },
+            "q2": {
+                "question": "Is a down payment(DP) required?",
+                "answer": "Yes, a small down payment is required to secure your reservation. The minimum down payment is 50% of the villa rental price."
+            },
+            "q3": {
+                "question": "What facilities are included",
+                "answer": "The villa includes a private pool, kitchen, WiFi, air conditioning, and Spacious front yard. Additional services are available upon request."
+            },
+            "q4": {
+                "question": "Is the Villa suitable for families or groups?",
+                "answer": "Absolutely! Our villa is perfect for families and groups, offering spacious rooms and shared areas for quality time together."
+            },
+            "q5": {
+                "question": "Can i cancel or rescedule my booking?",
+                "answer": "Yes, cancellations and reschedules are possible depending on our policy. Please contact customer service for details."
+            }
+        }
+    },
+    "footer": {
+        "description": "Personally managed with genuine care, our villa is designed",
+        "descriptioncont": "to make every guest feel at home — Where your comfort and",
+        "descriptionlast": "relaxation are our true priority.",
+        "follow": "Follow us for more information:",
+        "titlelink": "Quick Links",
+        "contactinfo": {
+            "title" : "Contact Information",
+            "wa1" : "Chat with Villa Tolping Admin",
+            "wa2" : "Ask About Villa Info & Availability"
+        }
+    }
+}
