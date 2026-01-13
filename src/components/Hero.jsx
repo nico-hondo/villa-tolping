@@ -8,6 +8,7 @@ import HeroImage from "../../public/images/Background-Image.png";
 import { IoLocationOutline } from "react-icons/io5";
 import { CiCalendar } from "react-icons/ci";
 import { IoIosSend } from "react-icons/io";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
 
 import { CalendarModal } from "../config/CalendarModal";
 
@@ -118,7 +119,10 @@ export default function Hero(){
                                 <IoLocationOutline className="text-(--color-button) text-sm md:text-lg lg:text-xl"/>
                                 <span className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-lg'} text-gray-600 font-montaga`}>{booking.direction.label}</span>
                             </div>
-                            <h3 className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>{booking.direction.helper}</h3>
+                            <div className="flex flex-row gap-4">
+                                <h3 className={`${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'} font-montaga font-medium text-gray-500 transition-all duration-500`}>{booking.direction.helper}</h3>
+                                <MdOutlineArrowRightAlt className={` ${isScrolled ? 'text-md' : 'text-md md:text-lg lg:text-xl'} mt-1 text-(--color-button) transition-all duration-500`}/>
+                            </div>
                         </div>
                         <div className="flex flex-col justify-center">
                             <div className="flex flex-row gap-2 items-center">

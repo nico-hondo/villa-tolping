@@ -12,6 +12,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { MdOutlineMail } from "react-icons/md";
 
+import { navItems } from "@/data/dataStore";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer(){
@@ -20,12 +21,19 @@ export default function Footer(){
 
     const { translations } = useLanguage();
 
-    // Destructure navbar translations
-    const navbar = translations.navbar;
-
     // Destructure footer translations
     const footer = translations.footer;
     const footContact = footer.contactinfo;
+
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if(!section) return;
+        
+        section.scrollIntoView({ 
+            behavior: "smooth", 
+            block: "start"
+        });
+    }
 
     // Configure Whatsapp Link
     const phoneNumbercs = '6282114667061';
@@ -72,12 +80,20 @@ export default function Footer(){
                             <div className="flex flex-col gap-6 hidden md:flex">
                                 <h3 className="font-semibold text-md">{footer.titlelink}</h3>
                                 <div className="flex flex-col gap-3 pr-8">
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.home}</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.gallery}</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.about}</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.testimonials}</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.booking}</a>
-                                    <a href="#" className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">{navbar.contact}</a>
+                                    {navItems.map(item => {
+                                        const navBar = translations.navbar[item.id];
+                                        return(
+                                            <li key={item.id} className="relative decoration-none list-none">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => scrollToSection(item.id)}
+                                                    className="px-1 text-sm tracking-wide text-white hover:text-(--color-badge) transition-colors duration-300 text-left cursor-pointer"
+                                                >
+                                                    {navBar}
+                                                </button>
+                                            </li>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             <div className="col-span-2 flex flex-col gap-6">

@@ -4,7 +4,7 @@
         "home" : "Beranda",
         "gallery" : "Galeri",
         "about" : "Tentang Kami",
-        "testimonials" : "Testimoni",
+        "testimonial" : "Testimoni",
         "booking" : "Pemesanan",
         "contact" : "Kontak"
     },
@@ -15,7 +15,7 @@
 
         "bookingmodal": {
             "direction":{
-                "label": "Rencanakan Kehidupan Anda",
+                "label": "Yuk, Rencanakan Menginap",
                 "helper": "Pilih tanggal kunjungan Anda"
             },
             "pickdates":{
@@ -28,7 +28,109 @@
     "gallery":{
         "badge": "Galeri",
         "opening": "Selamat datang di villa tolping. surga pribadi untuk kenyamanan & ketenangan alami",
-        "title": "Dimana Relaksasi Bertemu dengan Kemewahan"
+        "title": "Dimana Relaksasi Bertemu dengan Kemewahan",
+        "grouping": {
+            "outdoor" :{
+                "out1": {
+                    "src" : "/images/gallery/Outdoor1.jpg", 
+                    "alt" : "Tampak Luar"
+                },
+                "out2": {
+                    "src" : "/images/gallery/OutdoorNightView.jpeg", 
+                    "alt" : "Suasana di Malam hari"
+                },
+                "out3": {
+                    "src": "/images/gallery/Outdoor3.JPG", 
+                    "alt": "Area Parkir Luas"
+                },
+                "out4": {
+                    "src" : "/images/gallery/Outdoor4.JPG", 
+                    "alt": "Area yang Luas"
+                }
+            },
+            "bedroom": {
+                "bed1":{
+                    "src": "/images/gallery/Bedroom1.jpeg", 
+                    "alt": "Kamar Tidur Pertama"
+                },
+                "bed2": {
+                    "src": "/images/gallery/Bedroom2.jpeg", 
+                    "alt": "Kamar Tidur Kedua"
+                },
+                "bed3": {
+                    "src": "/images/gallery/Bedroom3.jpeg", 
+                    "alt": "Kamar Tidur Ketiga"
+                },
+                "bed4": {
+                    "src": "/images/gallery/Bedroom4(1).jpeg", 
+                    "alt": "Kamar Tidur Keempat"
+                }
+            },
+            "living": {
+                "liv1": {
+                    "src": "/images/gallery/Living1.JPG", 
+                    "alt": "Ruang Tamu di Lantai Satu"
+                },
+                "liv2": {
+                    "src": "/images/gallery/Living2.jpeg", 
+                    "alt": "Ruang Tamu di Lantai Dua"
+                },
+                "liv3": {
+                    "src": "/images/gallery/Living3.JPG", 
+                    "alt": "Ruang Tamu di Lantai Dua"
+                },
+                "liv4": {
+                    "src": "/images/gallery/Living4.JPG", 
+                    "alt": "Ruang Tamu di Lantai Satu"
+                }
+            },
+            "kitchen": {
+                "kit1": {
+                    "src": "/images/gallery/KitchenSet1.JPG", 
+                    "alt": "Dapur Lengkap Lantai Dua"
+                },
+                "kit2": {
+                    "src": "/images/gallery/KitchenSet2.JPG", 
+                    "alt": "Dapur Lengkap Lantai Satu"
+                },
+                "kit3": {
+                    "src": "/images/gallery/KitchenSet3.JPG", 
+                    "alt": "Area Wastafel"
+                }
+            },
+            "pool": {
+                "pool1": {
+                    "src": "/images/gallery/Pool1.JPG", 
+                    "alt": "Tampak Kolam Renang"
+                },
+                "pool2": {
+                    "src": "/images/gallery/Pool2.JPG", 
+                    "alt": "Tampak Kolam Renang di sudut berbeda"
+                },
+                "pool3": {
+                    "src": "/images/gallery/Pool3.JPG", 
+                    "alt": "Tampak Samping Kolam Renang"
+                }
+            },
+            "gazebo": {
+                "gaz1": {
+                    "src": "/images/gallery/Gazebo1.jpeg", 
+                    "alt": "Tampak Gazebo"
+                },
+                "gaz2": {
+                    "src": "/images/gallery/Gazebo2.jpg", 
+                    "alt": "Tampak Gazebo dari sudut berbeda"
+                },
+                "gaz3": {
+                    "src": "/images/gallery/Gazebo3.jpg", 
+                    "alt": "Tampak dari Area Parkir"
+                },
+                "gaz4": {
+                    "src": "/images/gallery/Gazebo4.jpg", 
+                    "alt": "Tampak Gazebo yang diambil oleh pengunjung"
+                }
+            }
+        }
     },
     "marketing":{
         "title": "Siap Merasakan Surga?",
@@ -52,7 +154,7 @@
     },
     "testimonials": {
         "badge": "Testimoni",
-        "title": "Dengar dari Para Tamu Kami"
+        "title": "Apa Kata Tamu Kami"
     },
     "booking": {
         "badge": "Pemesanan",
@@ -115,7 +217,7 @@
                     "people": "20 Orang"
                 },
                 "age": {
-                    "title": "Usia Minimal Check-in",
+                    "title": "Minimal Check-in",
                     "age": "Semua usia diperbolehkan"
                 },
                 "smoke":{
@@ -151,23 +253,23 @@
         "subtitle": "Jawaban cepat untuk pertanyaan umum seputar ",
         "subtitlecont": "Villa Tolping",
         "accordion": {
-            "q1": {
+            "faq-1": {
                 "question": "Bagaimana cara saya memesan penginapan di vila tersebut?",
                 "answer": "Mudah sekali — cukup klik tombol WhatsApp, dan Anda akan terhubung langsung dengan layanan pelanggan villa kami. Tim ramah kami akan memandu Anda melakukan proses pemesanan, mengkonfirmasi ketersediaan, dan membantu menjawab semua pertanyaan — secara real-time untuk pengalaman yang lancar dan personal."
             },
-            "q2": {
+            "faq-2": {
                 "question": "Apakah diperlukan DP (uang muka)?",
                 "answer": "Ya, diperlukan uang muka untuk mengamankan reservasi Anda. Minimum DP adalah 50% dari harga sewa villa. Sisa pembayaran harus dilakukan sebelum hari check-in."
             },
-            "q3": {
+            "faq-3": {
                 "question": "Fasilitas apa saja yang tersedia?",
                 "answer": "Villa dilengkapi kolam renang pribadi, dapur, WiFi, AC, dan halaman depan yang luas. Layanan tambahan tersedia berdasarkan permintaan."
             },
-            "q4": {
+            "faq-4": {
                 "question": "Apakah villa cocok untuk keluarga atau grup besar?",
                 "answer": "Sangat cocok! Villa kami ideal untuk keluarga dan grup, dengan ruangan yang lapang dan area bersama untuk menghabiskan waktu yang berkualitas."
             },
-            "q5": {
+            "faq-5": {
                 "question": "Bisakah saya membatalkan atau mengubah jadwal booking?",
                 "answer": "Ya, pembatalan dan penjadwalan ulang dimungkinkan sesuai kebijakan kami. Silakan hubungi layanan pelanggan untuk detailnya."
             }

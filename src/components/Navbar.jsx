@@ -12,6 +12,9 @@ import { IoClose } from "react-icons/io5";
 
 import { useLanguage } from "@/context/LanguageContext";
 
+import { navItems } from "@/data/dataStore";
+
+
 import LanguageSwitcher from "@/config/LanguageSwitcher";
 
 export default function Navbar() {
@@ -19,25 +22,20 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
     const [isClick, setIsClickFlex] = useState(false);
-    const [activeSection, setActiveSection] = useState("home");
+    
+    const DEFAULT_SECTION = "home";
+    const [activeSection, setActiveSection] = useState(DEFAULT_SECTION);
 
     const navRef = useRef(null);
 
-    const { call } = useLanguage();
+    const { translations } = useLanguage();
 
-    const navItems = [
-        { label: "Home", href: "home" },
-        { label: "Gallery", href: "gallery" },
-        { label: "About us", href: "about" },
-        { label: "Testimonial", href: "testimonial" },
-        { label: "Booking", href: "booking" },
-        { label: "Contact", href: "contact" },
-    ];
+    if(!translations?.navbar) return null;
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if(!section) return;
-
+        
         section.scrollIntoView({ 
             behavior: "smooth", 
             block: "start"
@@ -45,7 +43,7 @@ export default function Navbar() {
     }
 
     useEffect(() => {
-        const sections = navItems.map(item=> document.getElementById(item.href)).filter(Boolean);
+        const sections = navItems.map(item=> document.getElementById(item.id)).filter(Boolean);
 
         const observer = new IntersectionObserver(
             entries =>{
@@ -115,15 +113,16 @@ export default function Navbar() {
                     </a>
                     <nav ref={navRef} id="navbar" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
                         {navItems.map(item => {
-                            const isActive = activeSection === item.href;
+                            const isActive = activeSection === item.id;
+                            const navBar = translations.navbar[item.id];
                             return(
-                                <li key={item.href} className="relative decoration-none list-none inline-block mx-2 py-2">
+                                <li key={item.id} className="relative decoration-none list-none inline-block mx-2 py-2">
                                     <button
                                         type="button"
-                                        onClick={() => scrollToSection(item.href)}
+                                        onClick={() => scrollToSection(item.id)}
                                         className={`px-1 text-sm tracking-wide ${isActive ? 'text-teal-500' : ''} cursor-pointer`}
                                     >
-                                        {item.label}
+                                        {navBar}
                                     </button>
 
                                     {/* Underline Animation */}
