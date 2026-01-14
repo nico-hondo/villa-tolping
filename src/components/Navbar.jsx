@@ -42,6 +42,23 @@ export default function Navbar() {
         });
     }
 
+    const triggerlLog = (id) => {
+        const section = document.getElementById(id);
+
+        if(!section){
+            console.log("Section not found");
+        }
+
+        console.log("Section found:", section);
+    }
+
+    const handleClick = (id) => {
+        setActiveSection(id);
+        setIsClickFlex(false);
+        scrollToSection(id);
+        triggerlLog(id);
+    }
+
     useEffect(() => {
         const sections = navItems.map(item=> document.getElementById(item.id)).filter(Boolean);
 
@@ -55,7 +72,7 @@ export default function Navbar() {
             },
             {
                 root: null,
-                threshold: 0.6 //60% of the section is visible
+                threshold: 0.25 //60% of the section is visible
             }
         );
 
@@ -111,7 +128,7 @@ export default function Navbar() {
                             : 
                             isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Logo" width={150} height={50} className="transition-all duration-700"/>
                     </a>
-                    <nav ref={navRef} id="navbar" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
+                    <nav ref={navRef} id="navbar-desktop" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
                         {navItems.map(item => {
                             const isActive = activeSection === item.id;
                             const navBar = translations.navbar[item.id];
@@ -165,16 +182,39 @@ export default function Navbar() {
                             <IoClose />
                         </button>
                     </div>
-                    <a href="#" className="font-semibold px-3 py-2">Home</a>
-                    <a href="#" className="font-semibold px-3 py-2">Gallery</a>
-                    <a href="#" className="font-semibold px-3 py-2">About us</a>
-                    <a href="#" className="font-semibold px-3 py-2">Testimonial</a>
-                    <a href="#" className="font-semibold px-3 py-2">Booking</a>
-                    <a href="#" className="font-semibold px-3 py-2">Contact</a>
-                    <a href="#" className={`px-3 py-2 font-semibold flex text-sm justify-center items-center rounded-4xl border border-gray-800`}>
-                        <FaGlobeAmericas size={18} className="inline mr-2" />
-                        Eng
-                    </a>
+                    <nav ref={navRef} id="navbar-mobile" className={`flex flex-col gap-16 font-medium top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center transition-all duration-700`}>
+                        {navItems.map(item => {
+                            const isActive = activeSection === item.id;
+                            const navBar = translations.navbar[item.id];
+                            return(
+                                <li key={item.id} className="decoration-none list-none">
+                                    <button
+                                        type="button"
+                                        onClick={() => handleClick(item.id)}
+                                        className={`px-1 text-sm tracking-wide ${isActive ? 'text-purple-600' : ''} font-semibold cursor-pointer`}
+                                    >
+                                        {navBar}
+                                    </button>
+
+                                    {/* Underline Animation */}
+                                    <span 
+                                        className={`flex left-0 -bottom-1 h-[2px] w-full bg-purple-800
+                                        ${isActive ?
+                                            "scale-x-100 opacity-100"
+                                            : "scale-x-0 opacity-0"
+                                        }
+                                           origin-center 
+                                        `}
+                                    />
+                                </li>
+                            );
+                        })}
+                        {/* <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
+                            <FaGlobeAmericas size={18} className="inline mr-2" />
+                            Eng
+                        </a> */}
+                        <LanguageSwitcher isHovered={isHovered} isScrolled={isScrolled}/>
+                    </nav>
                 </div>
             )}
         </>
