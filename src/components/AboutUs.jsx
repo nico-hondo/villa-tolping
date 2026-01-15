@@ -17,6 +17,8 @@ export default function AboutUs(){
     const { translations } = useLanguage();
     const about = translations.about;
 
+    const { language } = useLanguage();
+
     return(
         <section id="about" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-white">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
@@ -32,7 +34,7 @@ export default function AboutUs(){
                                 {about.descriptioncont}
                                 </span>
                                 <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:flex lg:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
-                                {showFull ? 'Less...' : 'View More...'}
+                                {language === 'en' ? (showFull ? 'Less...' : 'View More...') : (showFull ? 'Lebih Sedikit...' : 'Lebih Banyak...')}
                                  </button>
                             </div>
                             

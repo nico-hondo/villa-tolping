@@ -19,7 +19,8 @@
             },
             "pickdates":{
                 "label": "Dates",
-                "placeholder": "Select Dates"
+                "placeholder": "Select Dates",
+                "helper": "Night"
             },
             "cta": "Check Availability"
         }

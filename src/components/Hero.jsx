@@ -131,7 +131,7 @@ export default function Hero(){
                                 } font-montaga`}>
                                     {nights === 'Dates'
                                     ? booking.pickdates.label
-                                    :`${nights} NIGHT${nights !== 1 ? 'S' : ''}`}
+                                    :`${nights} ${booking.pickdates.helper}${booking.pickdates.helper == "Night" ? (nights !== 1 ? 's' : '') : '' }`}
                                 </span>
                             </div>
                             
@@ -149,9 +149,9 @@ export default function Hero(){
                     </div>
                 </div>
                 <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
-                    <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-8 items-start">
                         <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">{translations.hero.title} <br/> {translations.hero.titlecont}</h1>
-                        <a href={whatsappLinkCSfirst} className="font-roboto h-12 w-35 bg-(--color-button) text-(--color-base) font-semibold rounded-3xl flex items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 text-sm">
+                        <a href={whatsappLinkCSfirst} className="font-roboto px-8 py-3 bg-(--color-button) text-(--color-base) font-semibold rounded-full items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 inline-block text-sm">
                             {translations.hero.cta}
                         </a>
                     </div>

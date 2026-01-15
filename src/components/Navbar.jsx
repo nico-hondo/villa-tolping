@@ -42,21 +42,21 @@ export default function Navbar() {
         });
     }
 
-    const triggerlLog = (id) => {
-        const section = document.getElementById(id);
+    // const triggerlLog = (id) => {
+    //     const section = document.getElementById(id);
 
-        if(!section){
-            console.log("Section not found");
-        }
+    //     if(!section){
+    //         console.log("Section not found");
+    //     }
 
-        console.log("Section found:", section);
-    }
+    //     console.log("Section found:", section);
+    // }
 
     const handleClick = (id) => {
         setActiveSection(id);
         setIsClickFlex(false);
         scrollToSection(id);
-        triggerlLog(id);
+        // triggerlLog(id);
     }
 
     useEffect(() => {
@@ -72,7 +72,7 @@ export default function Navbar() {
             },
             {
                 root: null,
-                threshold: 0.25 //60% of the section is visible
+                threshold: 0.6 //60% of the section is visible
             }
         );
 

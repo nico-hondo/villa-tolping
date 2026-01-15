@@ -15,19 +15,20 @@
 
         "bookingmodal": {
             "direction":{
-                "label": "Yuk, Rencanakan Menginap",
-                "helper": "Pilih tanggal kunjungan Anda"
+                "label": "Yuk, Rencanakan",
+                "helper": "Pilih tanggal"
             },
             "pickdates":{
                 "label": "Hari",
-                "placeholder": "Pilih Hari"
+                "placeholder": "Pilih Hari",
+                "helper": "Malam"
             },
             "cta": "Cek Ketersediaan"
         }
     },
     "gallery":{
         "badge": "Galeri",
-        "opening": "Selamat datang di villa tolping. surga pribadi untuk kenyamanan & ketenangan alami",
+        "opening": "Selamat datang di villa tolping",
         "title": "Dimana Relaksasi Bertemu dengan Kemewahan",
         "grouping": {
             "outdoor" :{
@@ -139,8 +140,8 @@
     },
     "about":{
         "badge": "Tentang Kami",
-        "title": "Mencari Villa yang Tepat",
-        "titlecont": "Buat Kamu?",
+        "title": "Mencari Villa",
+        "titlecont": "yang Tepat?",
         "description": "Tersembunyi di tengah ketenangan alam, Villa Tolping hadir sebagai tempat yang hangat dan nyaman untuk keluarga, teman, atau kelompok berkumpul dan merajut momen berharga. Dengan halaman yang luas, pepohonan yang sejuk, serta fasilitas yang memadai, villa kami menawarkan suasana sempurna untuk bersantai, merayakan sesuatu, atau sekadar menikmati kebersamaan.",
         "descriptioncont": "Tonton videonya untuk melihat pengalaman tamu kami secara langsung, lalu jelajahi fasilitas lengkap yang kami sediakan di bawah ini.",
         "titlefacilities": "Jelajahi fasilitas yang tersedia di villa kami",
