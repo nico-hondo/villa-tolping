@@ -134,13 +134,17 @@ export default function Hero(){
                                     :`${nights} ${booking.pickdates.helper}${booking.pickdates.helper == "Night" ? (nights !== 1 ? 's' : '') : '' }`}
                                 </span>
                             </div>
-                            
-                            <button 
-                            onClick={() => setIsCalendarOpen(!isCalendarOpen)}
-                            className={` ${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'}  font-montaga font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
-                                {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
-                            
-                            </button>
+
+                            <div className="flex flex-row gap-1 items-center">
+                                <button 
+                                onClick={() => setIsCalendarOpen(!isCalendarOpen)}
+                                className={` ${isScrolled ? 'text-md' : 'text-sm md:text-lg lg:text-xl'}  font-montaga font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
+                                    {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
+                                </button>
+                                <a href={whatsappCSFirstRefCal} alt="Check Availability" className="flex md:hidden">
+                                    <IoIosSend className={` ${isScrolled ? 'text-lg' : 'text-xl'} text-(--color-button) transition-all duration-500 hover:text-(--color-button-dark) cursor-pointer`}/>
+                                </a>
+                            </div>
                         </div>
                         <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
