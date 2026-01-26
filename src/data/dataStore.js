@@ -88,7 +88,7 @@ export const galleryData = {
     Pool: [
         { id: 1, src: "/images/gallery/Pool1.jpg", alt: "Swimming Pool view" },
         { id: 2, src: "/images/gallery/Pool2.jpg", alt: "Swimming Pool another view" },
-        { id: 3, src: "/images/gallery/Pool3.jpg", alt: "Another view from Visitors" }
+        { id: 3, src: "/images/gallery/Pool3.JPG", alt: "Another view from Visitors" }
     ],
     Gazebo: [
         { id: 1, src: "/images/gallery/Gazebo1.jpeg", alt: "Gazebo view" },
