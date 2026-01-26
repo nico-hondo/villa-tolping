@@ -105,7 +105,7 @@ export default function Gallery() {
                 <div className="flex flex-col gap-10 text-center">
                     <div className="flex flex-col text-center justify-center items-center gap-2">
                         <span className="w-full font-plus text-gray-500 text-xs font-medium uppercase">{galleryTranslations.opening}</span>
-                        <h1 className="font-villatolping font-medium text-black text-5xl pb-8">{galleryTranslations.title}</h1>
+                        <h1 className="font-villatolping font-medium text-black text-3xl md:text-4xl lg:text-5xl md:pb-8">{galleryTranslations.title}</h1>
                     </div>
                     <div className="flex flex-col gap-6">
                         {/* Filter buttons */}

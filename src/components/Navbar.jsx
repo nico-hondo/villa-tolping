@@ -148,9 +148,7 @@ export default function Navbar() {
                                         ${isActive ?
                                             "scale-x-100 opacity-100"
                                             : "scale-x-0 opacity-0"
-                                        }
-                                           origin-center 
-                                        `}
+                                        }origin-center`}
                                     />
                                 </li>
                             );
@@ -182,7 +180,7 @@ export default function Navbar() {
                             <IoClose />
                         </button>
                     </div>
-                    <nav ref={navRef} id="navbar-mobile" className={`flex flex-col gap-16 font-medium top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center transition-all duration-700`}>
+                    <nav ref={navRef} id="navbar-mobile" className={`flex flex-col gap-12 font-medium top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center transition-all duration-700`}>
                         {navItems.map(item => {
                             const isActive = activeSection === item.id;
                             const navBar = translations.navbar[item.id];

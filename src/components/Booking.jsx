@@ -23,7 +23,7 @@ export default function Booking(){
                     badgeName={booking.badge}
                 />
                 <div className="flex flex-col gap-4 text-center">
-                    <h1 className="font-villatolping font-medium text-5xl text-black">{booking.title}</h1>
+                    <h1 className="font-villatolping font-medium text-3xl md:text-4xl lg:text-5xl text-black">{booking.title}</h1>
                     <p className="font-roboto text-sm font-medium text-gray-400">{booking.subtitle}</p>
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center">
@@ -77,7 +77,7 @@ export default function Booking(){
                             </div>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl ">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:max-w-2xl lg:max-w-3xl ">
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
                                 <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">

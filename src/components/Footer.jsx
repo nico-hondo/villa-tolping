@@ -62,16 +62,16 @@ export default function Footer(){
                                 <p className="text-sm font-medium">{footer.follow}</p>
                                 <div className="flex flex-row gap-6">
                                     <a href="https://www.instagram.com/villatolping/" target="_blank" rel="noopener noreferrer">
-                                        <FaInstagram size={20} className="text-(--color-badge) md:text-white hover:text-(--color-badge) transition-colors duration-300 cursor-pointer"/>
+                                        <FaInstagram size={20} className="text-(--color-badge) hover:text-white transition-colors duration-300 cursor-pointer"/>
                                     </a>
                                     <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer">
-                                        <FiFacebook size={20} className="text-(--color-badge) md:text-white hover:text-(--color-badge) transition-colors duration-300 cursor-pointer"/>
+                                        <FiFacebook size={20} className="text-(--color-badge) hover:text-white transition-colors duration-300 cursor-pointer"/>
                                     </a>
                                     <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer">
-                                        <RiYoutubeLine size={20} className="text-(--color-badge) md:text-white hover:text-(--color-badge) transition-colors duration-300 cursor-pointer"/>
+                                        <RiYoutubeLine size={20} className="text-(--color-badge) hover:text-white transition-colors duration-300 cursor-pointer"/>
                                     </a>
                                     <a href="https://www.tiktok.com/@villa.tolping" target="_blank" rel="noopener noreferrer">
-                                        <FaTiktok size={16} className="text-(--color-badge) md:text-white hover:text-(--color-badge) transition-colors duration-300 cursor-pointer"/>
+                                        <FaTiktok size={16} className="text-(--color-badge) hover:text-white transition-colors duration-300 cursor-pointer"/>
                                     </a>
                                 </div>
                             </div>
@@ -129,7 +129,7 @@ export default function Footer(){
                 </div>
                 <hr className="border border-gray-700 border-solid opacity-25"/>
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="font-roboto text-sm text-gray-400">&copy; {tahunSekarang} Tolping Villa. All rights reserved.</p>
+                    <p className="font-roboto text-sm text-gray-400">&copy; {tahunSekarang} Tolping Villa. All Rights Reserved.</p>
                     <div className="flex flex-row gap-6">
                         <a href="#" className="font-roboto text-sm text-gray-400 hover:text-(--color-badge) transition-colors duration-300">Privacy Policy</a>
                         <a href="#" className="font-roboto text-sm text-gray-400 hover:text-(--color-badge) transition-colors duration-300">Terms of Service</a>

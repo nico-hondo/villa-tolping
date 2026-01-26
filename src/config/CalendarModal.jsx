@@ -17,7 +17,7 @@ function CalendarModal({
     // const [dateMode, setDateMode] = useState('checkIn');
     const [tempCheckIn, setTempCheckIn] = useState(checkInDate);
     const [tempCheckOut, setTempCheckOut] = useState(checkOutDate);
-    const [currentMonth, setCurrentMonth] = useState(new Date(2025, 10));
+    const [currentMonth, setCurrentMonth] = useState(new Date());
     const [hoverDate, setHoverDate] = useState(null);
 
     const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -100,12 +100,12 @@ function CalendarModal({
 
     console.log("What is day selested now : ", tempCheckIn , tempCheckOut);
 
-    const nextMonth = () => {
-        setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
-    };
-
     const prevMonth = () => {
         setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() - 1));
+    };
+
+    const nextMonth = () => {
+        setCurrentMonth(new Date(currentMonth.getFullYear(), currentMonth.getMonth() + 1));
     };
 
     const getNextMonth = () => {

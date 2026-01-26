@@ -33,7 +33,7 @@ export default function Faq(){
             <div className="max-w-6xl mx-auto flex flex-col gap-16">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-6 text-center">
-                        <h1 className="font-villatolping font-medium text-3xl text-black">{faqPD.title}</h1>
+                        <h1 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faqPD.title}</h1>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">
@@ -127,7 +127,7 @@ export default function Faq(){
                 </div>
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-4 text-center">
-                        <h1 className="font-villatolping font-medium text-3xl text-black">{faq.title}</h1>
+                        <h1 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faq.title}</h1>
                         <p className="font-roboto text-sm font-medium text-gray-400 ">{faq.subtitle} <br className="block md:hidden"/> {faq.subtitlecont}</p>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">

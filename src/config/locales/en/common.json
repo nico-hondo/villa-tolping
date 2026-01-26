@@ -141,14 +141,14 @@
         "badge": "About Us",
         "title": "Looking for the",
         "titlecont": "Perfect Villa?",
-        "description": "Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments. With a spacious yard, refreshing greenery, and comfortable facilities, our villa provides the perfect atmosphere for relaxing, celebrating, and enjoying time together.",
-        "descriptioncont": "Watch the video to see real guest experiences, then explore the complete amenities we provide below.",
-        "titlefacilities": "Discover the facilities available at our villa",
+        "description": "Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments.",
+        "descriptioncont": "Watch the video to see real guest experiences.",
+        "titlefacilities": "Enjoy the amenities available at our villa.",
         "facilities": {
             "pool": "Swimming Pool",
             "wifi": "Wifi",
             "kitchen": "Kitchen-Set",
-            "parking": "Spacious on-site parking available",
+            "parking": "Spacious on-site parking area",
             "ac": "AC"
         }
     },

@@ -16,7 +16,7 @@
         "bookingmodal": {
             "direction":{
                 "label": "Yuk, Rencanakan",
-                "helper": "Pilih tanggal"
+                "helper": "Pilih Tanggal"
             },
             "pickdates":{
                 "label": "Hari",
@@ -142,14 +142,14 @@
         "badge": "Tentang Kami",
         "title": "Mencari Villa",
         "titlecont": "yang Tepat?",
-        "description": "Tersembunyi di tengah ketenangan alam, Villa Tolping hadir sebagai tempat yang hangat dan nyaman untuk keluarga, teman, atau kelompok berkumpul dan merajut momen berharga. Dengan halaman yang luas, pepohonan yang sejuk, serta fasilitas yang memadai, villa kami menawarkan suasana sempurna untuk bersantai, merayakan sesuatu, atau sekadar menikmati kebersamaan.",
-        "descriptioncont": "Tonton videonya untuk melihat pengalaman tamu kami secara langsung, lalu jelajahi fasilitas lengkap yang kami sediakan di bawah ini.",
-        "titlefacilities": "Jelajahi fasilitas yang tersedia di villa kami",
+        "description": "Tersembunyi di tengah ketenangan alam, Villa Tolping hadir sebagai tempat yang hangat dan nyaman untuk keluarga, teman, atau kelompok untuk berkumpul dan merajut momen berharga.",
+        "descriptioncont": "Tonton video sebelah untuk melihat pengalaman tamu kami secara langsung.",
+        "titlefacilities": "Nikmati Fasilitas yang Tersedia",
         "facilities": {
             "pool": "Kolam Renang",
             "wifi": "Wifi",
             "kitchen": "Dapur Lengkap",
-            "parking": "Tersedia Area Parkir yang luas",
+            "parking": "Parkir yang luas",
             "ac": "AC"
         }
     },
@@ -184,14 +184,14 @@
             },
             "step5": {
                 "step": "Langkah 5",
-                "title": "Nikmati Pengalaman Menginap Anda",
+                "title": "Nikmati Penginapan Anda",
                 "description": "Nikmati dan ciptakan kenangan yang tak terlupakan."
             }
         }
     },
     "contact": {
         "badge": "Hubungi Kami",
-        "title": "Yuk, Ngobrol dengan Kami!",
+        "title": "Yuk, Ngobrol Dengan Kami!",
         "description": "Untuk pertanyaan atau penjadwalan layanan, jangan ragu menghubungi kami hari ini juga. Tim kami yang sigap siap mendampingi Anda dari awal hingga akhir.",
         "descriptioncont": "Silahkan hubungi kami via WhatsApp, email, atau media sosial untuk memulai.",
         "listContact": {
@@ -278,7 +278,7 @@
     },
     "footer": {
         "description": "Dikelola dengan penuh perhatian tulus, villa kami dirancang ",
-        "descriptioncont": "agar setiap tamu merasa seperti di rumah — di mana kenyamanan dan ",
+        "descriptioncont": "agar setiap tamu merasa seperti di rumah sendiri — di mana kenyamanan dan ",
         "descriptionlast": "ketenangan Anda adalah prioritas utama kami.",
         "follow": "Ikuti kami untuk info terbaru:",
         "titlelink": "Tautan Cepat",

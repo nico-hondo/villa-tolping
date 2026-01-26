@@ -20,7 +20,7 @@ export default function Contact(){
 
     const [isLoading, setIsLoading] = useState(true);
 
-    const { translations } = useLanguage();
+    const { language, translations } = useLanguage();
 
     const contact = translations.contact;
 
@@ -49,7 +49,7 @@ export default function Contact(){
                 />
                 <div className="flex flex-col gap-8 justify-center item-center">
                     <div className="flex flex-col gap-4 text-center">
-                        <h1 className="font-villatolping font-medium text-5xl text-black">
+                        <h1 className="font-villatolping font-medium text-3xl md:text-4xl lg:text-5xl text-black">
                             {contact.title}
                         </h1>
                         <p className={`font-roboto font-medium text-gray-400 text-sm transition-all duration-700 ease-in-out overflow-hidden ${showFull ? 'max-h-96' :'max-h-12 line-clamp-2'}`}>
@@ -58,7 +58,7 @@ export default function Contact(){
                             &nbsp;{contact.descriptioncont}
                         </p>
                         <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
-                            {showFull ? 'Less...' : 'View More...'}
+                            { language === 'en' ? (showFull ? 'Less...' : 'View More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...') }
                         </button>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
