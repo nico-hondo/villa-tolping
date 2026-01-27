@@ -148,8 +148,7 @@ export default function Navbar() {
                                         ${isActive ?
                                             "scale-x-100 opacity-100"
                                             : "scale-x-0 opacity-0"
-                                        }origin-center`}
-                                    />
+                                        }origin-center`}/>
                                 </li>
                             );
                         })}

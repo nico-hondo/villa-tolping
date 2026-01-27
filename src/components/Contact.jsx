@@ -57,7 +57,7 @@ export default function Contact(){
                             <br className="hidden md:flex"/>
                             &nbsp;{contact.descriptioncont}
                         </p>
-                        <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
+                        <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-xs transition-colors">
                             { language === 'en' ? (showFull ? 'Less...' : 'View More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...') }
                         </button>
                     </div>

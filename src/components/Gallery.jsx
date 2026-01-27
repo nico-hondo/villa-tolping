@@ -104,13 +104,13 @@ export default function Gallery() {
                 />
                 <div className="flex flex-col gap-10 text-center">
                     <div className="flex flex-col text-center justify-center items-center gap-2">
-                        <span className="w-full font-plus text-gray-500 text-xs font-medium uppercase">{galleryTranslations.opening}</span>
-                        <h1 className="font-villatolping font-medium text-black text-3xl md:text-4xl lg:text-5xl md:pb-8">{galleryTranslations.title}</h1>
+                        <h2 className="w-full font-plus text-gray-500 text-xs font-medium uppercase">{galleryTranslations.opening}</h2>
+                        <h3 className="font-villatolping font-medium text-black text-3xl md:text-4xl lg:text-5xl md:pb-8">{galleryTranslations.title}</h3>
                     </div>
                     <div className="flex flex-col gap-6">
                         {/* Filter buttons */}
                         <div className="relative w-full">
-                            <div className="relative overflow-x-auto scrollbar-hide scroll-smooth md:overflow-visible border-b border-gray-300 items-center justify-center md:flex">
+                            <div className="overflow-hidden scrollbar-hide scroll-smooth md:overflow-visible border-b border-gray-300 items-center justify-center md:flex">
                                 <div className="flex space-x-2 text-sm font-nunito-sans font-medium rounded-4xl px-0 md:px-2 w-fit md:mx-0">
                                     {categories.map((category) => (
                                     <button
@@ -173,7 +173,7 @@ export default function Gallery() {
                                     className="object-cover w-full h-64 md:h-80 lg:h-96 transition-transform duration-300 ease-in-out hover:scale-105"
                                     />
                                     <p className="font-(family-name:--font-nunito-sans) absolute bottom-4 left-4 text-sm text-white font-medium drop-shadow-lg">
-                                    {item.alt}
+                                    {item.title}
                                     </p>
                                 </div>
                                 </SwiperSlide>
@@ -187,10 +187,10 @@ export default function Gallery() {
                             </div>
                             
                             {/* Custom tombol navigasi */}
-                            <button onClick={handlePref} className={`custom-prev absolute left-0 md:-left-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-10 ${isFirstSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isFirstSlide} ref={prevRef}>
+                            <button onClick={handlePref} className={`custom-prev absolute left-0- md:-left-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-20 ${isFirstSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isFirstSlide} ref={prevRef}>
                                 <MdNavigateBefore className={`size-6 ${isFirstSlide ? 'text-gray-400' : 'text-white'}`}/>
                             </button>
-                            <button onClick={handleNext} className={`custom-next absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-10 ${isLastSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isLastSlide} ref={nextRef}>
+                            <button onClick={handleNext} className={`custom-next absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-20 ${isLastSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isLastSlide} ref={nextRef}>
                                 <MdNavigateNext className={`size-6 ${isLastSlide ? 'text-gray-400' : 'text-white'}`}/>
                             </button>
                         </div>

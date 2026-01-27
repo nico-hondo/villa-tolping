@@ -9,7 +9,7 @@
     },
     "hero": {
         "title": "Discover Serenity at",
-        "titlecont": "Tolping's Villa",
+        "titlecont": "Villa Tolping",
         "cta": "Book Now",
 
         "bookingmodal": {
@@ -141,7 +141,7 @@
         "badge": "About Us",
         "title": "Looking for the",
         "titlecont": "Perfect Villa?",
-        "description": "Nestled in a peaceful natural setting, Villa Tolping offers a warm and welcoming space for families, friends, and groups to gather and create meaningful moments.",
+        "description": "Nestled in the heart of nature’s tranquility, Villa Tolping is a warm and inviting sanctuary where families and friends can gather to weave together precious memories.",
         "descriptioncont": "Watch the video to see real guest experiences.",
         "titlefacilities": "Enjoy the amenities available at our villa.",
         "facilities": {
@@ -251,10 +251,10 @@
     "faq": {
         "title": "Frequently Asked Questions",
         "subtitle": "Quick answer to common questions about ",
-        "subtitlecont": "Tolping Villa",
+        "subtitlecont": "Villa Tolping",
         "accordion": {
             "faq-1": {
-                "question": "How do I book stay at the villa?",
+                "question": "How do I book stay at the Villa Tolping?",
                 "answer": "Booking your stay is simple — just click the WhatsApp button, and you’ll be instantly connected with our villa’s customer service. Our friendly team will guide you through the booking process, confirm availability, and help with any details you need — all in real time for a smooth and personal experience."
             },
             "faq-2": {
@@ -266,7 +266,7 @@
                 "answer": "The villa includes a private pool, kitchen, WiFi, air conditioning, and Spacious front yard. Additional services are available upon request."
             },
             "faq-4": {
-                "question": "Is the Villa suitable for families or groups?",
+                "question": "Is the Villa Tolping suitable for families or groups?",
                 "answer": "Absolutely! Our villa is perfect for families and groups, offering spacious rooms and shared areas for quality time together."
             },
             "faq-5": {
@@ -276,7 +276,7 @@
         }
     },
     "footer": {
-        "description": "Personally managed with genuine care, our villa is designed",
+        "description": "Villa Tolping is Personally Managed with genuine care, our villa is designed",
         "descriptioncont": "to make every guest feel at home — Where your comfort and",
         "descriptionlast": "relaxation are our true priority.",
         "follow": "Follow us for more information:",
@@ -284,7 +284,7 @@
         "contactinfo": {
             "title" : "Contact Information",
             "wa1" : "Chat with Villa Tolping Admin",
-            "wa2" : "Ask About Villa Info & Availability"
+            "wa2" : "Ask About Villa Tolping Info & Availability"
         }
     }
 }

@@ -63,37 +63,37 @@ export const navItems = [
 
 export const galleryData = {
     Outdoor: [
-        { id: 1, src: "/images/gallery/Outdoor1.jpg", alt: "Exterior View" },
-        { id: 2, src: "/images/gallery/OutdoorNightView.jpeg", alt: "Night View" },
-        { id: 3, src: "/images/gallery/Outdoor3.JPG", alt: "Wide Parking Space" },
-        { id: 4, src: "/images/gallery/Outdoor4.JPG", alt: "Spacious Area" },
+        { id: 1, src: "/images/gallery/Outdoor1.jpg", title: "Exterior View", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 2, src: "/images/gallery/OutdoorNightView.jpeg", title: "Night View", alt: "Villa Tolping di Bogor dengan Pemandangan Malam" },
+        { id: 3, src: "/images/gallery/Outdoor3.JPG", title: "Wide Parking Space", alt: "Area Parkir Luas di Villa Tolping daerah Bogor" },
+        { id: 4, src: "/images/gallery/Outdoor4.JPG", title: "Spacious Area", alt: "Rekreasi outdoor daerah Bogor di Villa Tolping" },
     ],
     Bedroom: [
-        { id: 1, src: "/images/gallery/Bedroom1.jpeg", alt: "First Bedroom" },
-        { id: 2, src: "/images/gallery/Bedroom2.jpeg", alt: "Second Bed" },
-        { id: 3, src: "/images/gallery/Bedroom3.jpeg", alt: "Third Bedroom" },
-        { id: 4, src: "/images/gallery/Bedroom4(1).jpeg", alt: "Fourth Bedroom" }
+        { id: 1, src: "/images/gallery/Bedroom1.jpeg", title: "First Bedroom", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 2, src: "/images/gallery/Bedroom2.jpeg", title: "Second Bedroom", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 3, src: "/images/gallery/Bedroom3.jpeg", title: "Third Bedroom", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 4, src: "/images/gallery/Bedroom4(1).jpeg", title: "Fourth Bedroom", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" }
     ],
     Living: [
-        { id: 1, src: "/images/gallery/Living1.JPG", alt: "Living Room on the First Floor" },
-        { id: 2, src: "/images/gallery/Living2.jpeg", alt: "Living Room on the Second Floor"},
-        { id: 3, src: "/images/gallery/Living3.JPG", alt: "Living Room on the Second Floor" },
-        { id: 4, src: "/images/gallery/Living4.JPG", alt: "Living Room on the First Floor" }
+        { id: 1, src: "/images/gallery/Living1.JPG", title: "Living Room on the First Floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 2, src: "/images/gallery/Living2.jpeg", title: "Living Room on the Second Floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 3, src: "/images/gallery/Living3.JPG", title: "Living Room on the Second Floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 4, src: "/images/gallery/Living4.JPG", title: "Living Room on the First Floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" }
     ],
     Kitchen: [
-        { id: 1, src: "/images/gallery/KitchenSet1.JPG", alt: "Kitchen Set on the second floor" },
-        { id: 2, src: "/images/gallery/KitchenSet2.JPG", alt: "Kitchen set on the first floor" },
-        { id: 3, src: "/images/gallery/KitchenSet3.JPG", alt: "Wastafel Area" }
+        { id: 1, src: "/images/gallery/KitchenSet1.JPG", title: "Kitchen Set on the second floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 2, src: "/images/gallery/KitchenSet2.JPG", title: "Kitchen set on the first floor", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
+        { id: 3, src: "/images/gallery/KitchenSet3.JPG", title: "Wastafel Area", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" }
     ],
     Pool: [
-        { id: 1, src: "/images/gallery/Pool1.jpg", alt: "Swimming Pool view" },
-        { id: 2, src: "/images/gallery/Pool2.jpg", alt: "Swimming Pool another view" },
-        { id: 3, src: "/images/gallery/Pool3.JPG", alt: "Another view from Visitors" }
+        { id: 1, src: "/images/gallery/Pool1.jpg", title: "Swimming Pool view", alt: "Villa Tolping dengan fasilitas kolam renang pribadi dibogor" },
+        { id: 2, src: "/images/gallery/Pool2.jpg", title: "Swimming Pool another view", alt: "Villa Tolping di Bogor dengan Pemandangan Alam", alt: "Villa Tolping dengan Fasilitas Kolam Renang Private dibogor" },
+        { id: 3, src: "/images/gallery/Pool3.JPG", title: "Another view from Visitors", alt: "Villa Tolping di Bogor dengan Pemandangan Alam", alt: "Villa Tolping dengan Fasilitas Kolam Renang Pribadi dibogor" }
     ],
     Gazebo: [
-        { id: 1, src: "/images/gallery/Gazebo1.jpeg", alt: "Gazebo view" },
-        { id: 2, src: "/images/gallery/Gazebo2.jpg", alt: "Gazebo another view" },
-        { id: 3, src: "/images/gallery/Gazebo3.jpg", alt: "Another view from the parking area" },
-        { id: 4, src: "/images/gallery/Gazebo4.jpg", alt: "Another view from Visitors" }
+        { id: 1, src: "/images/gallery/Gazebo1.jpeg", title: "Gazebo view", alt: "Villa Tolping dengan Fasilitas Lengkap dibogor" },
+        { id: 2, src: "/images/gallery/Gazebo2.jpg", title: "Gazebo another view", alt: "Villa Tolping dengan Fasilitas Lengkap dibogor" },
+        { id: 3, src: "/images/gallery/Gazebo3.jpg", title: "Another view from the parking area", alt: "Villa Tolping dengan Fasilitas Lengkap dibogor" },
+        { id: 4, src: "/images/gallery/Gazebo4.jpg", title: "Another view from Visitors", alt: "Villa Tolping dengan Fasilitas Lengkap dibogor" }
     ]
 }

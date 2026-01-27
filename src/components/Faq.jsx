@@ -78,17 +78,17 @@ export default function Faq(){
                                         </div>
                                         <hr />
                                         <div className="flex flex-col gap-2 text-sm">
-                                            <h5 className="text-black">{pdInfost.pets.title}</h5>
+                                            <h5 className="text-black">{pdInfost.pets.title}:</h5>
                                             <span className="text-gray-600">{pdInfost.pets.info}</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <div className="flex flex-col gap-2">
+                                        <div className="flex flex-col md:flex-row gap-2">
                                             <h5 className="text-black">{pdInfost.parking.title}:</h5>
                                             <span className="text-gray-600">{pdInfost.parking.info}</span>
                                         </div>
 
-                                        <div className="flex flex-col gap-2">
+                                        <div className="flex flex-col md:flex-row gap-2">
                                             <h5 className="text-black">{pdInfost.capacity.title}:</h5>
                                             <span className="text-gray-600">{pdInfost.capacity.people}</span>
                                         </div>
@@ -111,13 +111,13 @@ export default function Faq(){
                                 <hr  className="mt-4"/>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <h5 className="text-black">{pdInfond.pay.title}</h5>
-                                        <span className="flex flex-row gap-2 text-gray-600 font-semibold">
-                                            {pdInfond.pay.info}
+                                        <h5 className="text-black font-semibold">{pdInfond.pay.title}</h5>
+                                        <span className="flex flex-row gap-2 text-gray-600">
+                                            "{pdInfond.pay.info}"
                                         </span>
                                     </div>
                                     <div className="flex flex-col gap-2 text-sm">
-                                        <h5 className="text-black">{pdInfond.service.title}</h5>
+                                        <h5 className="text-black font-semibold">{pdInfond.service.title}</h5>
                                         <span className="text-gray-600">{pdInfond.service.info} <br />{pdInfond.service.infolang}</span>
                                     </div>
                                 </div>
