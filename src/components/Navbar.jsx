@@ -53,11 +53,36 @@ export default function Navbar() {
     // }
 
     const handleClick = (id) => {
-        setActiveSection(id);
         setIsClickFlex(false);
         scrollToSection(id);
         // triggerlLog(id);
+
+        // Tambahkan hash ke URL tanpa reload halaman
+        // window.history.pushState(null, '', `#${id}`);
     }
+
+    // Handling saat user langsung akses dengan hash di URL(misal: domain.com/#services)
+    // useEffect(() => {
+    //     const hash = window.location.hash.replace('#', '');
+    //     if(hash && navItems.some(item => item.id === hash)){
+    //         setActiveSection(hash);
+    //         setTimeout(() => scrollToSection(hash), 100);
+    //     }
+    // }, []);
+
+    // Handle saat user klik back/forward di browser
+    // useEffect(() => {
+    //     const handleHashChange = () => {
+    //         const hash = window.location.hash.replace('#', '');
+    //         if(hash){
+    //             setActiveSection(hash);
+    //             scrollToSection(hash);
+    //         }
+    //     };
+
+    //     window.addEventListener('hashchange', handleHashChange);
+    //     return () => window.removeEventListener('hashchange', handleHashChange);
+    // }, []);
 
     useEffect(() => {
         const sections = navItems.map(item=> document.getElementById(item.id)).filter(Boolean);
@@ -126,7 +151,7 @@ export default function Navbar() {
                             isScrolled ? 
                             logoVillaBl 
                             : 
-                            isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Logo" width={150} height={50} className="transition-all duration-700"/>
+                            isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Bogor" width={150} height={50} className="transition-all duration-700"/>
                     </a>
                     <nav ref={navRef} id="navbar-desktop" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
                         {navItems.map(item => {
@@ -134,13 +159,16 @@ export default function Navbar() {
                             const navBar = translations.navbar[item.id];
                             return(
                                 <li key={item.id} className="relative decoration-none list-none inline-block mx-2 py-2">
-                                    <button
-                                        type="button"
-                                        onClick={() => scrollToSection(item.id)}
+                                    <a
+                                        href={`#${item.id}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleClick(item.id);
+                                        }}
                                         className={`px-1 text-sm tracking-wide ${isActive ? 'text-teal-500' : ''} cursor-pointer`}
                                     >
                                         {navBar}
-                                    </button>
+                                    </a>
 
                                     {/* Underline Animation */}
                                     <span 
@@ -185,13 +213,16 @@ export default function Navbar() {
                             const navBar = translations.navbar[item.id];
                             return(
                                 <li key={item.id} className="decoration-none list-none">
-                                    <button
-                                        type="button"
-                                        onClick={() => handleClick(item.id)}
+                                    <a
+                                        href={`#${item.id}`}
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handleClick(item.id);
+                                        }}
                                         className={`px-1 text-sm tracking-wide ${isActive ? 'text-purple-600' : ''} font-semibold cursor-pointer`}
                                     >
                                         {navBar}
-                                    </button>
+                                    </a>
 
                                     {/* Underline Animation */}
                                     <span 

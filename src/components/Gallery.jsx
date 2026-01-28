@@ -97,7 +97,7 @@ export default function Gallery() {
     }, [swiperRef, prevRef, nextRef]);
 
     return(
-        <main id="gallery" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6">
+        <main id="gallery" className="relative isolate w-full scroll-mt-[var(--nav-height)] py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
                     badgeName= {galleryTranslations.badge}
@@ -110,7 +110,7 @@ export default function Gallery() {
                     <div className="flex flex-col gap-6">
                         {/* Filter buttons */}
                         <div className="relative w-full">
-                            <div className="overflow-hidden scrollbar-hide scroll-smooth md:overflow-visible border-b border-gray-300 items-center justify-center md:flex">
+                            <div className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth md:overflow-visible border-b border-gray-300 items-center justify-center md:flex">
                                 <div className="flex space-x-2 text-sm font-nunito-sans font-medium rounded-4xl px-0 md:px-2 w-fit md:mx-0">
                                     {categories.map((category) => (
                                     <button
@@ -134,7 +134,7 @@ export default function Gallery() {
                             </div>
                         </div>
                         
-                        <div className="relative">
+                        <div className="relative overflow-hidden">
                             {/* Swiper Gallery */}
                             <Swiper
                             modules={[Navigation, Pagination]}
@@ -180,17 +180,17 @@ export default function Gallery() {
                             ))}
                             </Swiper>
 
-                            <div className="flex md:hidden flex-row absolute inset-y-0 right-0 gap-1 text-black text-sm justify-center items-center">
+                            <div className="flex md:hidden flex-row absolute top-0 right-2 z-[1] gap-1 text-black text-xs md:text-sm justify-center items-center">
                                 0{currentIndex + 1}
                                 <span className="font-villatolping text-2xl font-medium">/</span>
                                 0{totalSlide + 1}
                             </div>
                             
                             {/* Custom tombol navigasi */}
-                            <button onClick={handlePref} className={`custom-prev absolute left-0- md:-left-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-20 ${isFirstSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isFirstSlide} ref={prevRef}>
+                            <button onClick={handlePref} className={`custom-prev absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer shadow-md z-[2] ${isFirstSlide ? 'hidden' : 'flex bg-black hover:bg-gray-700'}`} disabled={isFirstSlide} ref={prevRef}>
                                 <MdNavigateBefore className={`size-6 ${isFirstSlide ? 'text-gray-400' : 'text-white'}`}/>
                             </button>
-                            <button onClick={handleNext} className={`custom-next absolute right-0 md:-right-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer z-20 ${isLastSlide ? 'hidden' : 'flex bg-black shadow-md hover:bg-gray-700'}`} disabled={isLastSlide} ref={nextRef}>
+                            <button onClick={handleNext} className={`custom-next absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer shadow-md z-[2] ${isLastSlide ? 'hidden' : 'flex bg-black hover:bg-gray-700'}`} disabled={isLastSlide} ref={nextRef}>
                                 <MdNavigateNext className={`size-6 ${isLastSlide ? 'text-gray-400' : 'text-white'}`}/>
                             </button>
                         </div>

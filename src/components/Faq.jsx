@@ -33,7 +33,7 @@ export default function Faq(){
             <div className="max-w-6xl mx-auto flex flex-col gap-16">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-6 text-center">
-                        <h1 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faqPD.title}</h1>
+                        <h2 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faqPD.title}</h2>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">

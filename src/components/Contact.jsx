@@ -120,7 +120,7 @@ export default function Contact(){
                                 allowFullScreen
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="Villa Tolping Location"
+                                title="Villa Tolping Bogor Location Map"
                                 onLoad={() => setIsLoading(false)}
                             />
                         </div>

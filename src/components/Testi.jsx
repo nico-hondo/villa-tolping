@@ -44,7 +44,7 @@ export default function Testi(){
 
 
     return(
-        <section id="testimonial" className="w-full scroll-mt-[var(--nav-height)] bg-sectionColor justify-center items-center py-10 md:py-24 px-6">
+        <section id="testimonial" className="relative isolate w-full scroll-mt-[var(--nav-height)] bg-sectionColor justify-center items-center py-10 md:py-24 px-6">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 ">
                 <div className="flex max-w-full justify-center items-center">
                     <Image 
@@ -55,7 +55,7 @@ export default function Testi(){
                     className="object-cover rounded-3xl"
                     />
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="relative flex flex-col gap-6">
                     <Badge 
                         badgeName={testi.badge}
                     />
@@ -70,11 +70,11 @@ export default function Testi(){
 
                     <span className="font-semibold text-gray-300 text-sm">{currentData.author}</span>
 
-                    <div className="flex flex-row gap-4">
-                        <button onClick={handlePrev} className={`custom-prev border border-gray-300 rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-10 ${isFirstSlide ? 'border-gray-100 opacity-75 cursor-none' : 'border-gray-300'}`} disabled={isFirstSlide}>
+                    <div className="md:absolute md:bottom-0 flex flex-row gap-4 mt-4">
+                        <button onClick={handlePrev} className={`custom-prev border border-gray-300 rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isFirstSlide ? 'border-gray-100 opacity-75 cursor-none' : 'border-gray-300'}`} disabled={isFirstSlide}>
                             <MdNavigateBefore className={`text-white size-6 ${isFirstSlide? 'text-gray-700 opacity-50 ' : 'text-white hover:text-gray-200'}`}/>
                         </button>
-                        <button onClick={handleNext} className={`custom-next bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-10 ${isLastSlide ? 'bg-gray-400 cursor-not-allowed opacity-50' : 'bg-white hover:bg-gray-100'}`} disabled={isLastSlide}>
+                        <button onClick={handleNext} className={`custom-next bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isLastSlide ? 'bg-gray-400 cursor-not-allowed opacity-50' : 'bg-white hover:bg-gray-100'}`} disabled={isLastSlide}>
                             <MdNavigateNext className="text-black size-6"/>
                         </button>
                     </div>

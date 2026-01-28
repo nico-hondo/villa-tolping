@@ -106,7 +106,7 @@ export default function Hero(){
     return(
         <section id="home" className="w-full h-screen flex items-center justify-center relative">
 
-            <Image src={HeroImage} alt="Hero-Image" className="w-full h-full inset-0 object-cover absolute"/>
+            <Image src={HeroImage} alt="Villa Tolping Megamendung Bogor" className="w-full h-full inset-0 object-cover absolute"/>
 
             {/* Overlay background - linear gradient -> to right */}
             <div className="absolute inset-0 bg-linear-to-r from-slate-800/80 via-slate-800/50 to-transparent"></div>

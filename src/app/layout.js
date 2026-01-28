@@ -44,6 +44,7 @@ export const metadata = {
 
   alternates: {
     canonical: "https://villatolping.web.id/",
+    shortlink: "https://villatolping.web.id/",
   },
 
   openGrapg: {

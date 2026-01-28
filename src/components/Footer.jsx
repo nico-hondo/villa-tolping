@@ -54,7 +54,7 @@ export default function Footer(){
         <footer className="w-full py-12 px-6 bg-footer border-t border-gray-200">
             <div className="max-w-6xl mx-auto flex flex-col gap-16">
                 <div className="flex flex-col gap-4">
-                    <Image src={logovilla} alt="Villa-Tolping Logo" width={230} height={230}/>
+                    <Image src={logovilla} alt="Villa Tolping Bogor" width={230} height={230}/>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4 text-white font-plus">
                         <div className="flex flex-col gap-10">
                             <p className="text-sm/7 font-medium">"{footer.description} <br className="hidden md:block"/>{footer.descriptioncont} <br className="hidden md:block"/> {footer.descriptionlast}"</p>

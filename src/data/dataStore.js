@@ -5,7 +5,7 @@ export const testiData = [
         description: "Tempat bersih, parkiran luas, kolam bersih, peralatan makan lengkap, penjaga villa sangat membantu, secara keseluruhan TOP BGT ♥️",
         author: "Evi Oinike Sirait",
         src: "/images/testi/evioiniketesti.jpg",
-        alt: "Gambar-Testimonial-Evi"
+        alt: "Villa Tolping Testimonial"
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const testiData = [
         description: "Recommended! Akses tidak jauh dari pintu tol, parkirannya luas, area bermainnya luas, ada driving golf, setiap ruangan rapih, bersih dan minimalis, ada dapur besar dan dapur kecil, saung, peralatan makan semua lengkap. Mantap pokoknya!🫶",
         author: "Elisabeth Yohana",
         src: "/images/testi/elisabethtesti.jpg",
-        alt: "Gambar-Testimonial-elisabeth"
+        alt: "Villa Tolping Testimonial"
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const testiData = [
         description: "Tempat nyaman, bersih, suasana enak, fasilitas lengkap. Rekomen banget untuk kapasitas 20 orangan. Pokoknya the best.",
         author: "Kristian Sendi",
         src: "/images/testi/kristiantesti.jpg",
-        alt: "Gambar-Testimonial-Kristian"
+        alt: "Villa Tolping Testimonial"
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ export const testiData = [
         description: "Villa Tolping cocok untuk acara retreat.",
         author: "Togihon Rosalina",
         src: "/images/testi/togihontesti.jpg",
-        alt: "Gambar-Testimonial-Togihon"
+        alt: "Villa Tolping Testimonial"
     },
 ];
 
