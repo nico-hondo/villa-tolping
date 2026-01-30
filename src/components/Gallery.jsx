@@ -110,8 +110,8 @@ export default function Gallery() {
                     <div className="flex flex-col gap-6">
                         {/* Filter buttons */}
                         <div className="relative w-full">
-                            <div className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth md:overflow-visible border-b border-gray-300 items-center justify-center md:flex">
-                                <div className="flex space-x-2 text-sm font-nunito-sans font-medium rounded-4xl px-0 md:px-2 w-fit md:mx-0">
+                            <div className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth border-b border-gray-300 items-center">
+                                <div className="flex justify-center min-w-full juspace-x-2 text-sm font-nunito-sans font-medium rounded-4xl px-0 md:px-2 w-fit md:mx-0">
                                     {categories.map((category) => (
                                     <button
                                     key={category}
