@@ -5,6 +5,8 @@ import "./globals.css";
 import FAB from "@/components/FABWhatsapp";
 import { LanguageProvider } from "@/context/LanguageContext";
 
+import AOSProvider from "@/config/AOSProvider";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -70,6 +72,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LanguageProvider>
+          <AOSProvider />
           {children}
         </LanguageProvider>
         <FAB/>

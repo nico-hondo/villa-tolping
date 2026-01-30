@@ -113,7 +113,7 @@ export default function Hero(){
 
             <div className="w-full z-10 flex flex-col gap-48 justify-center pt-20">
                 <div className={`${isScrolled ? 'bg-white fixed top-20 left-0 w-full z-40' : 'w-full md:max-w-4xl lg:max-w-5xl xl:max-w-6xl xl:mx-48 px-6'} transition-all duration-300`}>
-                    <div className={`bg-white ${isScrolled ? 'max-w-6xl mx-auto py-2 px-2 rounded-none' : 'w-full py-4 px-2 md:px-8 rounded-2xl shadow-lg'} grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 transition-all duration-700 ease-out`}>
+                    <div data-aos="zoom-in-up" className={`bg-white ${isScrolled ? 'max-w-6xl mx-auto py-2 px-2 rounded-none' : 'w-full py-4 px-2 md:px-8 rounded-2xl shadow-lg'} grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 transition-all duration-700 ease-out`}>
                         <div className="flex flex-col border-r border-dashed border-indigo-500 justify-center gap-1 px-2 md:px-4">
                             <div className="flex flex-row gap-2 items-center">
                                 <IoLocationOutline className="text-(--color-button) text-sm md:text-lg lg:text-xl"/>
@@ -124,26 +124,25 @@ export default function Hero(){
                                 <MdOutlineArrowRightAlt className={` ${isScrolled ? 'text-md' : 'text-sm md:text-md lg:text-xl'} mt-1 text-(--color-button) transition-all duration-500`}/>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center px-2 md:px-4 gap-1">
-                            <div className="flex flex-row gap-2 items-center">
-                                <CiCalendar className="text-(--color-button) text-sm md:text-lg lg:text-lg"/>
-                                <span className={`${isScrolled ? 'text-xs md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'} ${nights > 0 ? 'text-gray-800 font-semibold' : 'text-gray-500 font-semibold'} font-villatolping`}>
-                                    {nights === 'Dates'
-                                    ? booking.pickdates.label
-                                    :`${nights} ${booking.pickdates.helper}${booking.pickdates.helper == "Night" ? (nights !== 1 ? 's' : '') : '' }`}
-                                </span>
-                            </div>
-
-                            <div className="flex flex-row gap-1 items-center">
+                        <div className="flex flex-row md:flex-col justify-evenly md:justify-center items-center md:items-start px-2 md:px-4 gap-1">
+                            <div className="flex flex-col gap-1">
+                                <div className="flex flex-row gap-2 items-center">
+                                    <CiCalendar className="text-(--color-button) text-sm md:text-lg lg:text-lg"/>
+                                    <span className={`${isScrolled ? 'text-xs md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'} ${nights > 0 ? 'text-gray-800 font-semibold' : 'text-gray-500 font-semibold'} font-villatolping`}>
+                                        {nights === 'Dates'
+                                        ? booking.pickdates.label
+                                        :`${nights} ${booking.pickdates.helper}${booking.pickdates.helper == "Night" ? (nights !== 1 ? 's' : '') : '' }`}
+                                    </span>
+                                </div>
                                 <button 
                                 onClick={() => setIsCalendarOpen(!isCalendarOpen)}
                                 className={` ${isScrolled ? 'text-sm md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'}  font-villatolping font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
                                     {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
-                                </button>
-                                <a href={whatsappCSFirstRefCal} alt="Check Availability" className="flex md:hidden">
-                                    <IoIosSend className={` ${isScrolled ? 'text-lg' : 'text-xl'} text-(--color-button) transition-all duration-500 hover:text-(--color-button-dark) cursor-pointer`}/>
-                                </a>
+                                </button>  
                             </div>
+                            <a href={whatsappCSFirstRefCal} alt="Check Availability" className="flex md:hidden">
+                                <IoIosSend className={` ${isScrolled ? 'text-lg' : 'text-xl'} text-(--color-button) transition-all duration-500 hover:text-(--color-button-dark) cursor-pointer`}/>
+                            </a>
                         </div>
                         <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
                             <IoIosSend className="text-lg"/>
@@ -153,8 +152,8 @@ export default function Hero(){
                 </div>
                 <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
                     <div className="flex flex-col gap-8 items-start">
-                        <h1 className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">{translations.hero.title} <br/> {translations.hero.titlecont}</h1>
-                        <a href={whatsappLinkCSfirst} className="font-roboto px-8 py-3 bg-(--color-button) text-gray-700 font-semibold rounded-full items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 inline-block text-sm">
+                        <h1 data-aos="fade-right" className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">{translations.hero.title} <br/> {translations.hero.titlecont}</h1>
+                        <a href={whatsappLinkCSfirst} data-aos="fade-right" className="font-roboto px-8 py-3 bg-(--color-button) text-gray-700 font-semibold rounded-full items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 inline-block text-sm">
                             {translations.hero.cta}
                         </a>
                     </div>

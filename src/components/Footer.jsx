@@ -129,8 +129,8 @@ export default function Footer(){
                 </div>
                 <hr className="border border-gray-700 border-solid opacity-25"/>
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="font-roboto text-sm text-gray-400">&copy; {tahunSekarang} Tolping Villa. All Rights Reserved.</p>
-                    <div className="flex flex-row gap-6">
+                    <p className="font-roboto text-sm text-gray-400 text-center">&copy; {tahunSekarang} Villa Tolping. All Rights Reserved. <br className="flex md:hidden"/>Developed by HaseaGroup.</p>
+                    <div className="hidden lg:flex flex-row gap-6">
                         <a href="#" className="font-roboto text-sm text-gray-400 hover:text-(--color-badge) transition-colors duration-300">Privacy Policy</a>
                         <a href="#" className="font-roboto text-sm text-gray-400 hover:text-(--color-badge) transition-colors duration-300">Terms of Service</a>
                     </div>

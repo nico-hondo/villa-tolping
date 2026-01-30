@@ -146,47 +146,49 @@ export default function Navbar() {
             >
 
                 <div className="max-w-6xl mx-auto h-full px-4 flex justify-between items-center">
-                    <a href="#">
+                    <a data-aos="fade-down" href="#">
                         <Image src={
                             isScrolled ? 
                             logoVillaBl 
                             : 
                             isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Bogor" width={150} height={50} className="transition-all duration-700"/>
                     </a>
-                    <nav ref={navRef} id="navbar-desktop" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center hidden md:flex transition-all duration-700`}>
-                        {navItems.map(item => {
-                            const isActive = activeSection === item.id;
-                            const navBar = translations.navbar[item.id];
-                            return(
-                                <li key={item.id} className="relative decoration-none list-none inline-block mx-2 py-2">
-                                    <a
-                                        href={`#${item.id}`}
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handleClick(item.id);
-                                        }}
-                                        className={`px-1 text-sm tracking-wide ${isActive ? 'text-teal-500' : ''} cursor-pointer`}
-                                    >
-                                        {navBar}
-                                    </a>
+                    <div data-aos="fade-down" className="flex flex-row gap-2 hidden md:flex">
+                        <nav ref={navRef} id="navbar-desktop" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center transition-all duration-700`}>
+                            {navItems.map(item => {
+                                const isActive = activeSection === item.id;
+                                const navBar = translations.navbar[item.id];
+                                return(
+                                    <li key={item.id} className="relative decoration-none list-none inline-block mx-2 py-2">
+                                        <a
+                                            href={`#${item.id}`}
+                                            onClick={(e) => {
+                                                e.preventDefault();
+                                                handleClick(item.id);
+                                            }}
+                                            className={`px-1 text-sm tracking-wide ${isActive ? 'text-teal-500' : ''} cursor-pointer`}
+                                        >
+                                            {navBar}
+                                        </a>
 
-                                    {/* Underline Animation */}
-                                    <span 
-                                        className={`absolute left-0 -bottom-1 h-[2px] w-full bg-teal-500
-                                        ${isActive ?
-                                            "scale-x-100 opacity-100"
-                                            : "scale-x-0 opacity-0"
-                                        }origin-center`}/>
-                                </li>
-                            );
-                        })}
-                        {/* <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
-                            <FaGlobeAmericas size={18} className="inline mr-2" />
-                            Eng
-                        </a> */}
-                        <LanguageSwitcher isHovered={isHovered} isScrolled={isScrolled}/>
-                    </nav>
-                    <button onClick={() => setIsClickFlex(true)} className={`md:hidden text-xl ${isScrolled ? 'text-gray-500' : 'text-gray-200'} hover:text-teal-400 transition-colors duration-300`}>
+                                        {/* Underline Animation */}
+                                        <span 
+                                            className={`absolute left-0 -bottom-1 h-[2px] w-full bg-teal-500
+                                            ${isActive ?
+                                                "scale-x-100 opacity-100"
+                                                : "scale-x-0 opacity-0"
+                                            }origin-center`}/>
+                                    </li>
+                                );
+                            })}
+                            {/* <a href="#" className={`px-3 py-2 font-medium flex text-xs justify-center items-center rounded-4xl border border-gray-300 hover:text-teal-500 ${isScrolled ? 'border-gray-800' : (isHovered ? 'border-gray-800':'border-gray-300')}`}>
+                                <FaGlobeAmericas size={18} className="inline mr-2" />
+                                Eng
+                            </a> */}
+                        </nav>
+                        <LanguageSwitcher isHovered={isHovered} isScrolled={isScrolled} />
+                    </div>
+                    <button data-aos="fade-down" onClick={() => setIsClickFlex(true)} className={`md:hidden text-xl ${isScrolled ? 'text-gray-500' : 'text-gray-200'} hover:text-teal-400 transition-colors duration-300`}>
                         <FaBars/>
                     </button>
                 </div>
