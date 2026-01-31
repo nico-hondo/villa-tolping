@@ -147,7 +147,7 @@ export default function Navbar() {
 
                 <div className="max-w-6xl mx-auto h-full px-4 flex justify-between items-center">
                     <a data-aos="fade-down" href="#">
-                        <Image src={
+                        <Image loading="lazy" src={
                             isScrolled ? 
                             logoVillaBl 
                             : 

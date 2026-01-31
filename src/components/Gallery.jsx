@@ -180,12 +180,12 @@ export default function Gallery() {
                             ))}
                             </Swiper>
 
-                            <div className="flex md:hidden flex-row absolute top-0 right-2 z-[1] gap-1 text-black text-xs md:text-sm justify-center items-center">
+                            {/* <div className="flex md:hidden flex-row absolute top-0 right-2 z-[1] gap-1 text-black text-xs md:text-sm justify-center items-center">
                                 0{currentIndex + 1}
                                 <span className="font-villatolping text-2xl font-medium">/</span>
                                 0{totalSlide + 1}
-                            </div>
-                            
+                            </div> */}
+                            s
                             {/* Custom tombol navigasi */}
                             <button onClick={handlePref} className={`custom-prev absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-black rounded-full w-10 h-10 items-center justify-center cursor-pointer shadow-md z-[2] ${isFirstSlide ? 'hidden' : 'flex bg-black hover:bg-gray-700'}`} disabled={isFirstSlide} ref={prevRef}>
                                 <MdNavigateBefore className={`size-6 ${isFirstSlide ? 'text-gray-400' : 'text-white'}`}/>

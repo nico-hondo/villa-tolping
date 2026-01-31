@@ -121,7 +121,7 @@ export default function Hero(){
                             </div>
                             <div className="flex flex-row gap-4">
                                 <h3 className={`${isScrolled ? 'text-xs md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'} font-villatolping font-medium text-gray-500 transition-all duration-500`}>{booking.direction.helper}</h3>
-                                <MdOutlineArrowRightAlt className={` ${isScrolled ? 'text-md' : 'text-sm md:text-md lg:text-xl'} mt-1 text-(--color-button) transition-all duration-500`}/>
+                                <MdOutlineArrowRightAlt className={` ${isScrolled ? 'text-md' : 'text-sm md:text-md lg:text-xl'} text-(--color-button) transition-all duration-500`}/>
                             </div>
                         </div>
                         <div className="flex flex-row md:flex-col justify-evenly md:justify-center items-center md:items-start px-2 md:px-4 gap-1">
@@ -136,7 +136,7 @@ export default function Hero(){
                                 </div>
                                 <button 
                                 onClick={() => setIsCalendarOpen(!isCalendarOpen)}
-                                className={` ${isScrolled ? 'text-sm md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'}  font-villatolping font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
+                                className={` ${isScrolled ? 'text-xs md:text-sm lg:text-md' : 'text-xs md:text-sm lg:text-md'}  font-villatolping font-medium text-left text-gray-900 md:text-gray-800 lg:text-gray-500 cursor-pointer hover:text-black transition duration-300`}>
                                     {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
                                 </button>  
                             </div>

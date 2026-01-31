@@ -70,7 +70,7 @@ export default function Testi(){
 
                     <span className="font-semibold text-gray-300 text-sm">{currentData.author}</span>
 
-                    <div className="md:absolute md:bottom-0 flex flex-row gap-4 mt-4">
+                    <div className="md:bottom-0 flex flex-row gap-4 mt-4">
                         <button onClick={handlePrev} className={`custom-prev border border-gray-300 rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isFirstSlide ? 'border-gray-100 opacity-75 cursor-none' : 'border-gray-300'}`} disabled={isFirstSlide}>
                             <MdNavigateBefore className={`text-white size-6 ${isFirstSlide? 'text-gray-700 opacity-50 ' : 'text-white hover:text-gray-200'}`}/>
                         </button>
