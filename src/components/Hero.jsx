@@ -3,7 +3,7 @@ import { useState, useEffect} from "react";
 
 import Image from "next/image";
 
-import HeroImage from "../../public/images/Background-Image.png";
+import HeroImage from "../../public/images/Background-Image.jpg";
 
 import { IoLocationOutline } from "react-icons/io5";
 import { CiCalendar } from "react-icons/ci";
@@ -140,11 +140,11 @@ export default function Hero(){
                                     {checkInDate && checkOutDate ? `${formatDate(checkInDate)} - ${formatDate(checkOutDate)}` : booking.pickdates.placeholder}
                                 </button>  
                             </div>
-                            <a href={whatsappCSFirstRefCal} alt="Check Availability" className="flex md:hidden">
+                            <a href={whatsappCSFirstRefCal} alt="Check Availability" className="flex md:hidden" aria-label="villa tolping accessibility from user get in touch to admin">
                                 <IoIosSend className={` ${isScrolled ? 'text-lg' : 'text-xl'} text-(--color-button) transition-all duration-500 hover:text-(--color-button-dark) cursor-pointer`}/>
                             </a>
                         </div>
-                        <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4">
+                        <a href={whatsappCSFirstRefCal} className="w-full hidden md:flex flex-row gap-2 items-center bg-black/90 rounded-full justify-center text-white cursor-pointer hover:bg-(--color-button) hover:text-black transition duration-300 py-4" aria-label="villa tolping accessibility from user get in touch to admin">
                             <IoIosSend className="text-lg"/>
                             <p className="text-xs md:text-sm lg:text-md">{booking.cta}</p>
                         </a>
@@ -153,7 +153,7 @@ export default function Hero(){
                 <div className="w-full md:max-w-4xl lg:max-w-6xl xl:mx-48 px-6 flex flex-col gap-48 relative transition-all duration-500">
                     <div className="flex flex-col gap-8 items-start">
                         <h1 data-aos="fade-right" className="font-cormorant-garamond font-medium text-4xl text-white md:text-5xl ">{translations.hero.title} <br/> {translations.hero.titlecont}</h1>
-                        <a href={whatsappLinkCSfirst} data-aos="fade-right" className="font-roboto px-8 py-3 bg-(--color-button) text-gray-700 font-semibold rounded-full items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 inline-block text-sm">
+                        <a href={whatsappLinkCSfirst} data-aos="fade-right" className="font-roboto px-8 py-3 bg-(--color-button) text-gray-700 font-semibold rounded-full items-center justify-center hover:bg-gray-900 hover:text-gray-300 transition duration-300 inline-block text-sm" aria-label="villa tolping accessibility from user get in touch to admin">
                             {translations.hero.cta}
                         </a>
                     </div>

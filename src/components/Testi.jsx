@@ -71,10 +71,10 @@ export default function Testi(){
                     <span className="font-semibold text-gray-300 text-sm">{currentData.author}</span>
 
                     <div className="md:bottom-0 flex flex-row gap-4 mt-4">
-                        <button onClick={handlePrev} className={`custom-prev border border-gray-300 rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isFirstSlide ? 'border-gray-100 opacity-75 cursor-none' : 'border-gray-300'}`} disabled={isFirstSlide}>
+                        <button onClick={handlePrev} className={`custom-prev border border-gray-300 rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isFirstSlide ? 'border-gray-100 opacity-75 cursor-none' : 'border-gray-300'}`} disabled={isFirstSlide} aria-label="prev-villatolpingarrow">
                             <MdNavigateBefore className={`text-white size-6 ${isFirstSlide? 'text-gray-700 opacity-50 ' : 'text-white hover:text-gray-200'}`}/>
                         </button>
-                        <button onClick={handleNext} className={`custom-next bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isLastSlide ? 'bg-gray-400 cursor-not-allowed opacity-50' : 'bg-white hover:bg-gray-100'}`} disabled={isLastSlide}>
+                        <button onClick={handleNext} className={`custom-next bg-white rounded-full shadow-md w-10 h-10 flex items-center justify-center cursor-pointer z-[2] ${isLastSlide ? 'bg-gray-400 cursor-not-allowed opacity-50' : 'bg-white hover:bg-gray-100'}`} disabled={isLastSlide} aria-label="next-villatolpingarrow">
                             <MdNavigateNext className="text-black size-6"/>
                         </button>
                     </div>

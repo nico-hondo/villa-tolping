@@ -17,7 +17,7 @@ export default function FAB() {
 
     return (
         <>
-            <a href={whatsappLinkCSfirst} className="fixed right-0 md:right-10 lg:right-10 rounded-full bg-linear-to-t from-[#075e54] via-[#128c7e] to-[#25d366] bottom-10 z-50 p-4 m-4 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <a href={whatsappLinkCSfirst} className="fixed right-0 md:right-10 lg:right-10 rounded-full bg-linear-to-t from-[#075e54] via-[#128c7e] to-[#25d366] bottom-10 z-50 p-4 m-4 shadow-lg hover:shadow-xl transition-shadow duration-300" aria-label="villa tolping accessibility from user get in touch to admin">
                 <FaWhatsapp size={32} color="white" />
             </a>
         </>

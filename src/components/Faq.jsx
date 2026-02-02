@@ -38,7 +38,7 @@ export default function Faq(){
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">
                             <div onClick={() => toggle(1)} className="flex flex-row justify-between cursor-pointer">
-                                <h1 className="font-plus text-black text-sm font-medium">{faqPD.modalst.title}</h1>
+                                <h3 className="font-plus text-black text-sm font-medium">{faqPD.modalst.title}</h3>
                                 <div className="flex-shrink-0 transition-transform duration-300">
                                     {open == 1 ?(
                                         <FaChevronUp size={16} className="text-(--color-base) font-bold"/>
@@ -78,18 +78,18 @@ export default function Faq(){
                                         </div>
                                         <hr />
                                         <div className="flex flex-col gap-2 text-sm">
-                                            <h5 className="text-black">{pdInfost.pets.title}:</h5>
+                                            <p className="text-black">{pdInfost.pets.title}:</p>
                                             <span className="text-gray-600">{pdInfost.pets.info}</span>
                                         </div>
                                     </div>
                                     <div className="flex flex-col gap-2 text-sm">
                                         <div className="flex flex-col md:flex-row gap-2">
-                                            <h5 className="text-black">{pdInfost.parking.title}:</h5>
+                                            <p className="text-black">{pdInfost.parking.title}:</p>
                                             <span className="text-gray-600">{pdInfost.parking.info}</span>
                                         </div>
 
                                         <div className="flex flex-col md:flex-row gap-2">
-                                            <h5 className="text-black">{pdInfost.capacity.title}:</h5>
+                                            <p className="text-black">{pdInfost.capacity.title}:</p>
                                             <span className="text-gray-600">{pdInfost.capacity.people}</span>
                                         </div>
                                     </div>
@@ -98,7 +98,7 @@ export default function Faq(){
                         </div>
                         <div className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 hover:shadow-xl transition-shadow duration-300">
                             <div onClick={() => toggle(2)} className="flex flex-row justify-between cursor-pointer">
-                                <h1 className="font-plus text-black text-sm font-medium">{faqPD.modalnd.title}</h1>
+                                <h3 className="font-plus text-black text-sm font-medium">{faqPD.modalnd.title}</h3>
                                 <div className="flex-shrink-0 transition-transform duration-300">
                                     {open == 2 ?(
                                         <FaChevronUp size={16} className="text-(--color-base) font-bold"/>
@@ -127,8 +127,8 @@ export default function Faq(){
                 </div>
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-4 text-center">
-                        <h1 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faq.title}</h1>
-                        <p className="font-roboto text-sm font-medium text-gray-400 ">{faq.subtitle} <br className="block md:hidden"/> {faq.subtitlecont}</p>
+                        <h2 className="font-villatolping font-medium text-2xl md:text-3xl text-black">{faq.title}</h2>
+                        <p className="font-roboto text-sm font-medium text-gray-600 ">{faq.subtitle} <br className="block md:hidden"/> {faq.subtitlecont}</p>
                     </div>
                     <div className="max-w-2xl mx-auto w-full flex flex-col gap-4">
                         {faqs.map(item => {
@@ -136,7 +136,7 @@ export default function Faq(){
                             return(
                                 <div key={item.id} onClick={() => toggleIndex(item.id)}  className="flex flex-col bg-white rounded-xl shadow-md shadow-gray-200 p-5 cursor-pointer hover:shadow-xl transition-shadow duration-300">
                                     <div className="flex flex-row justify-between">
-                                        <h1 className="font-plus text-black text-sm font-medium">{accordion.question}</h1>
+                                        <h3 className="font-plus text-black text-sm font-medium">{accordion.question}</h3>
                                         <div className="flex-shrink-0 transition-transform duration-300">
                                             {isActive(item.id) ?(
                                                 <FaChevronUp size={16} className="text-(--color-base) font-bold"/>

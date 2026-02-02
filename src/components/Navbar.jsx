@@ -188,7 +188,7 @@ export default function Navbar() {
                         </nav>
                         <LanguageSwitcher isHovered={isHovered} isScrolled={isScrolled} />
                     </div>
-                    <button data-aos="fade-down" onClick={() => setIsClickFlex(true)} className={`md:hidden text-xl ${isScrolled ? 'text-gray-500' : 'text-gray-200'} hover:text-teal-400 transition-colors duration-300`}>
+                    <button data-aos="fade-down" onClick={() => setIsClickFlex(true)} className={`md:hidden text-xl ${isScrolled ? 'text-gray-500' : 'text-gray-200'} hover:text-teal-400 transition-colors duration-300`} aria-label="show-villatolpingnav">
                         <FaBars/>
                     </button>
                 </div>

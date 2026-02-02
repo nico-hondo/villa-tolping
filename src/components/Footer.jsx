@@ -78,7 +78,7 @@ export default function Footer(){
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div className="flex flex-col gap-6 hidden md:flex">
-                                <h3 className="font-semibold text-md">{footer.titlelink}</h3>
+                                <span className="font-medium text-md">{footer.titlelink}</span>
                                 <div className="flex flex-col gap-3 pr-8">
                                     {navItems.map(item => {
                                         const navBar = translations.navbar[item.id];
@@ -87,7 +87,7 @@ export default function Footer(){
                                                 <button
                                                     type="button"
                                                     onClick={() => scrollToSection(item.id)}
-                                                    className="px-1 text-sm tracking-wide text-white hover:text-(--color-badge) transition-colors duration-300 text-left cursor-pointer"
+                                                    className="text-sm tracking-wide text-white hover:text-(--color-badge) transition-colors duration-300 text-left cursor-pointer"
                                                 >
                                                     {navBar}
                                                 </button>
@@ -97,28 +97,28 @@ export default function Footer(){
                                 </div>
                             </div>
                             <div className="col-span-2 flex flex-col gap-6">
-                                <h3 className="font-semibold text-md">{footContact.title}</h3>
+                                <span className="font-medium text-md">{footContact.title}</span>
                                 <div className="flex flex-col gap-3">
-                                    <a href={whatsappLinkCSfirst} className="flex flex-row gap-4 items-center">
+                                    <a href={whatsappLinkCSfirst} className="flex flex-row gap-4 items-center" aria-label="accessibility user to access villa tolping media social">
                                         <FaWhatsapp size={24} className="text-(--color-badge)"/>
                                         <p className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">
                                             {footContact.wa1}
                                         </p>
                                     </a>
                                     <hr className="border-gray-400"/>
-                                    <a href={whatsappLinkCSsecond} className="flex flex-row gap-4 items-center">
+                                    <a href={whatsappLinkCSsecond} className="flex flex-row gap-4 items-center" aria-label="accessibility user to access villa tolping media social">
                                         <FaWhatsapp size={24} className="text-(--color-badge)"/>
                                         <p className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">
                                             {footContact.wa2}
                                         </p>
                                     </a>
                                     <hr className="border-gray-400"/>
-                                    <a href={emailLink} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-4 items-center">
+                                    <a href={emailLink} target="_blank" rel="noopener noreferrer" className="flex flex-row gap-4 items-center" aria-label="accessibility user to access villa tolping media social">
                                         <MdOutlineMail size={24} className="text-(--color-badge)"/>
                                         <p className="text-md font-medium text-white hover:text-(--color-badge) transition-colors duration-300">admin@villatolping.com</p>
                                     </a>
                                     <hr className="border-gray-400"/>
-                                    <a href="https://maps.app.goo.gl/aR6bZLeTnm3ZB5727" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-4">
+                                    <a href="https://maps.app.goo.gl/aR6bZLeTnm3ZB5727" target="_blank" rel="noopener noreferrer" className="flex flex-row gap-4" aria-label="accessibility user to access villa tolping media social">
                                         <MdOutlineLocationOn size={24} className="text-(--color-badge)"/>
                                         <p className="text-sm font-medium text-white hover:text-(--color-badge) transition-colors duration-300">Jl. Kp. Balandongan, Ciherang, <br />Megamendung, Indonesia, West Java</p>
                                     </a>

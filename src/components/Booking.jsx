@@ -24,13 +24,13 @@ export default function Booking(){
                 />
                 <div className="flex flex-col gap-4 text-center">
                     <h1 className="font-villatolping font-medium text-3xl md:text-4xl lg:text-5xl text-black">{booking.title}</h1>
-                    <p className="font-roboto text-sm font-medium text-gray-400">{booking.subtitle}</p>
+                    <p className="font-roboto text-sm font-medium text-gray-600">{booking.subtitle}</p>
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
-                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
+                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-600 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
                                     {steps.step1.step}
                                 </span>
                             </div>
@@ -39,14 +39,14 @@ export default function Booking(){
                                     <IoMdImages size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step1.title}</h4>
-                                    <p className="text-gray-400 text-sm px-6">{steps.step1.description}</p>
+                                    <h2 className="font-plus font-semibold text-black text-lg">{steps.step1.title}</h2>
+                                    <p className="text-gray-600 text-sm px-6">{steps.step1.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
-                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
+                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-600 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
                                     {steps.step2.step}
                                 </span>
                             </div>
@@ -55,14 +55,14 @@ export default function Booking(){
                                     <IoLogoWhatsapp size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step2.title}</h4>
-                                    <p className="text-gray-400 text-sm px-6">{steps.step2.description}</p>
+                                    <h2 className="font-plus font-semibold text-black text-lg">{steps.step2.title}</h2>
+                                    <p className="text-gray-600 text-sm px-6">{steps.step2.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
-                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
+                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-600 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
                                     {steps.step3.step}
                                 </span>
                             </div>
@@ -71,8 +71,8 @@ export default function Booking(){
                                     <FaRegCalendarCheck size={22} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step3.title}</h4>
-                                    <p className="text-gray-400 text-sm px-6">{steps.step3.description}</p>
+                                    <h2 className="font-plus font-semibold text-black text-lg">{steps.step3.title}</h2>
+                                    <p className="text-gray-600 text-sm px-6">{steps.step3.description}</p>
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export default function Booking(){
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full md:max-w-2xl lg:max-w-3xl ">
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
-                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
+                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-600 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
                                     {steps.step4.step}
                                 </span>
                             </div>
@@ -89,14 +89,14 @@ export default function Booking(){
                                     <MdPayment size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step4.title}</h4>
-                                    <p className="text-gray-400 text-sm px-6">{steps.step4.description}</p>
+                                    <h2 className="font-plus font-semibold text-black text-lg">{steps.step4.title}</h2>
+                                    <p className="text-gray-600 text-sm px-6">{steps.step4.description}</p>
                                 </div>
                             </div>
                         </div>
                         <div className="bg-white rounded-3xl p-8">
                             <div className="max-w-full mx-auto flex justify-end">
-                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-500 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
+                                <span id="badgeGallery" className="bg-(--color-badge) text-gray-600 font-plus font-semibold py-1 px-4 rounded-md text-[10px]">
                                     {steps.step5.step}
                                 </span>
                             </div>
@@ -105,8 +105,8 @@ export default function Booking(){
                                     <BsGift size={24} className="text-(--color-base) font-bold"/>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <h4 className="font-plus font-semibold text-black text-lg">{steps.step5.title}</h4>
-                                    <p className="text-gray-400 text-sm px-6">{steps.step5.description}</p>
+                                    <h2 className="font-plus font-semibold text-black text-lg">{steps.step5.title}</h2>
+                                    <p className="text-gray-600 text-sm px-6">{steps.step5.description}</p>
                                 </div>
                             </div>
                         </div>

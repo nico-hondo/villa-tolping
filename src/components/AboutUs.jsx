@@ -30,11 +30,11 @@ export default function AboutUs(){
                         <div className="flex flex-col gap-6">
                             <h1 className="font-villatolping font-medium text-black text-3xl md:text-4xl lg:text-5xl text-center md:text-left">{about.title}<br />{about.titlecont}</h1>
                             <div className="pr-0 md:pr-8 text-center md:text-justify flex flex-col gap-2">
-                                <span className={`text-gray-500 leading-5 md:leading-5 lg:leading-6 text-xs md:text-sm lg:text-md font-swiss ${showFull ? 'max-h-96' : 'max-h-12 line-clamp-3 md:max-h-12 md:line-clamp-3 lg:max-h-none lg:line-clamp-none'}`}>{about.description}<br />
+                                <span className={`text-gray-600 leading-5 md:leading-5 lg:leading-6 text-xs md:text-sm lg:text-md font-swiss ${showFull ? 'max-h-96' : 'max-h-12 line-clamp-3 md:max-h-12 md:line-clamp-3 lg:max-h-none lg:line-clamp-none'}`}>{about.description}<br />
                                 {about.descriptioncont}
                                 </span>
-                                <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:block lg:hidden text-blue-500 hover:text-blue-600 text-xs transition-colors">
-                                {language === 'en' ? (showFull ? 'Less...' : 'View More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...')}
+                                <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:block lg:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
+                                {language === 'en' ? (showFull ? 'Less...' : 'More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...')}
                                  </button>
                             </div>
                             

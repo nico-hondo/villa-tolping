@@ -52,13 +52,13 @@ export default function Contact(){
                         <h1 className="font-villatolping font-medium text-3xl md:text-4xl lg:text-5xl text-black">
                             {contact.title}
                         </h1>
-                        <p className={`font-roboto font-medium text-gray-400 text-sm transition-all duration-700 ease-in-out overflow-hidden ${showFull ? 'max-h-96' :'max-h-12 line-clamp-2'}`}>
+                        <p className={`font-roboto font-medium text-gray-600 text-sm transition-all duration-700 ease-in-out overflow-hidden ${showFull ? 'max-h-96' :'max-h-12 line-clamp-2'}`}>
                             {contact.description}
                             <br className="hidden md:flex"/>
                             &nbsp;{contact.descriptioncont}
                         </p>
-                        <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-xs transition-colors">
-                            { language === 'en' ? (showFull ? 'Less...' : 'View More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...') }
+                        <button type="button" onClick={() => funcShowFull(showFull, setShowFull)} id="btnMore" className="block md:hidden text-blue-500 hover:text-blue-600 text-sm transition-colors">
+                            { language === 'en' ? (showFull ? 'Less...' : 'More...') : (showFull ? 'Lebih Sedikit...' : 'Selengkapnya...') }
                         </button>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
@@ -69,7 +69,7 @@ export default function Contact(){
                                         <MdEmail size={24} className="text-(--color-base) font-bold"/>
                                     </div>
                                     <div className="flex flex-col gap-1 justify-center" >
-                                        <span className="font-plus font-medium text-gray-400 text-sm">Email</span>
+                                        <span className="font-plus font-medium text-gray-600 text-sm">Email</span>
                                         <p className="text-black text-md ">villatolping@gmail.com</p>
                                     </div>
                                 </a>
@@ -78,23 +78,23 @@ export default function Contact(){
                                         <FaLocationDot size={24} className="text-(--color-base) font-bold"/>
                                     </div>
                                     <div className="flex flex-col gap-1 justify-center">
-                                        <span className="font-plus font-medium text-gray-400 text-sm">{contact.listContact.address}</span>
+                                        <span className="font-plus font-medium text-gray-600 text-sm">{contact.listContact.address}</span>
                                         <p className="max-w-full text-black text-sm">Jl. Kp. Balandongan, Ciherang, <br />Megamendung, Indonesia, West Java</p>
                                     </div>
                                 </a>
                                 <div className="max-w-full flex flex-col border border-gray-300 rounded-3xl justify-center items-center gap-4 p-6 hover:shadow-lg transition-shadow duration-300">
-                                    <span className="font-plus font-medium text-gray-400 text-sm">{contact.listContact.follow}</span>
+                                    <span className="font-plus font-medium text-gray-600 text-sm">{contact.listContact.follow}</span>
                                     <div className="flex flex-row gap-6">
-                                        <a href="https://www.instagram.com/villatolping/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10">
+                                        <a href="https://www.instagram.com/villatolping/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10" aria-label="accessibility user to access villa tolping media social">
                                             <FaInstagram size={18} className="text-(--color-base) font-bold"/>
                                         </a>
-                                        <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10">
+                                        <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10" aria-label="accessibility user to access villa tolping media social">
                                             <FaFacebookF size={18} className="text-(--color-base) font-bold"/>
                                         </a>
-                                        <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10">
+                                        <a href="https://www.facebook.com/people/Villa-Tolping/61551715414399/" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10" aria-label="accessibility user to access villa tolping media social">
                                             <FaYoutube size={18} className="text-(--color-base) font-bold"/>
                                         </a>
-                                        <a href="https://www.tiktok.com/@villa.tolping" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10">
+                                        <a href="https://www.tiktok.com/@villa.tolping" target="_blank" rel="noopener noreferrer" className="flex justify-center items-center bg-(--color-badge) rounded-full w-10 h-10" aria-label="accessibility user to access villa tolping media social">
                                             <FaTiktok size={18} className="text-(--color-base) font-bold"/>
                                         </a>
                                     </div>
