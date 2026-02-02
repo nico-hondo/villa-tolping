@@ -26,7 +26,7 @@ export default function Gallery() {
     //Kenapa dikurang 2 ? Karena perbedaan jumlah data dengan jumlah pagination. So currentIndex ini value nya akan bertambah seiring function onClick dijalankan. Jadi currentIndex di lastslide itu mempunyai nilai 2, sedangkan jumlah data gambar terdapat 4, jikalau dikurang 1 maka isLastSlide tidak valid, sehingga dikurangi 2 agar match dengan jumlah currentIndex
     
     const {translations} = useLanguage();
-    const galleryTranslations = translations.gallery || {badge: "", opening: "", title: ""};
+    const galleryTranslations = translations.gallery;
 
     // const currentData = galleryVar[currentIndex];
     const categories = Object.keys(galleryData);
@@ -114,6 +114,10 @@ export default function Gallery() {
         }
     }
 
+     if(!mounted) {
+        return null;
+     }
+     
     return(
         <main id="gallery" className="relative isolate w-full scroll-mt-[var(--nav-height)] py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
@@ -146,14 +150,13 @@ export default function Gallery() {
                                     </button>
                                     ))}
                                 </div>
+
                                 {/* fix: Show counter after mounted function */}
-                                {mounted && (
-                                    <div className="hidden md:flex flex-row absolute inset-y-0 right-0 gap-1 text-black text-sm justify-center items-center">
-                                        {String(currentIndex + 1).padStart(2, '0')}
-                                        <span className="font-villatolping text-2xl font-medium">/</span>
-                                        {String(totalSlide + 1).padStart(2, '0')}
-                                    </div>
-                                )}
+                                <div className="hidden md:flex flex-row absolute inset-y-0 right-0 gap-1 text-black text-sm justify-center items-center">
+                                    {mounted ? String(currentIndex + 1).padStart(2, '0') : "01"}
+                                    <span className="font-villatolping text-2xl font-medium">/</span>
+                                    {mounted ? String(totalSlide + 1).padStart(2, '0') : "01"}
+                                </div>
                             </div>
                         </div>
                         
@@ -200,9 +203,9 @@ export default function Gallery() {
                                                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                                 priority={index < 2} //Prioritas untuk 2 gambar pertama
                                             />
-                                            <p className="font-(family-name:--font-nunito-sans) absolute bottom-4 left-4 text-sm text-white font-medium drop-shadow-lg">
+                                            <div className="font-(family-name:--font-nunito-sans) absolute bottom-4 left-4 text-sm text-white font-medium drop-shadow-lg">
                                                 {item.title}
-                                            </p>
+                                            </div>
                                         </div>
                                         </SwiperSlide>
                                     ))}
