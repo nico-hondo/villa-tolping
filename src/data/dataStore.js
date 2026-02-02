@@ -64,7 +64,7 @@ export const navItems = [
 export const galleryData = {
     Outdoor: [
         { id: 1, src: "/images/gallery/Outdoor1.jpg", title: "Exterior View", alt: "Villa Tolping di Bogor dengan Pemandangan Alam" },
-        { id: 2, src: "/images/gallery/OutdoorNightView.JPEG", title: "Night View", alt: "Villa Tolping di Bogor dengan Pemandangan Malam" },
+        { id: 2, src: "/images/gallery/OutdoorNightView.jpeg", title: "Night View", alt: "Villa Tolping di Bogor dengan Pemandangan Malam" },
         { id: 3, src: "/images/gallery/Outdoor3.JPG", title: "Wide Parking Space", alt: "Area Parkir Luas di Villa Tolping daerah Bogor" },
         { id: 4, src: "/images/gallery/Outdoor4.JPG", title: "Spacious Area", alt: "Rekreasi outdoor daerah Bogor di Villa Tolping" },
     ],
