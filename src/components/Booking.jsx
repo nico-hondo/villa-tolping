@@ -17,7 +17,7 @@ export default function Booking(){
     const steps = booking.steps;
 
     return(
-        <section id="booking" className="w-full scroll-mt-[var(--nav-height)] py-12 px-6 bg-(--secondary-background)">
+        <section id="booking" className="w-full min-h-[80vh] scroll-mt-[var(--nav-height)] py-12 px-6 bg-(--secondary-background)">
             <div className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
                     badgeName={booking.badge}

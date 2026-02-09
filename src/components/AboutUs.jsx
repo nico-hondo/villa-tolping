@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 
 import Badge from "./ui/Badge";
+
 import HostVideoModal from "@/config/HostVideoModal";
 
 import { funcShowFull } from "@/app/interactions";
@@ -67,7 +68,7 @@ export default function AboutUs(){
                             <h1 className="w-full font-villatolping text-2xl md:text-3xl text-black">{about.titlefacilities}</h1>
                             <span className="w-15 h-[3px] bg-teal-500"></span>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                             <div className="flex flex-col justify-center items-center shadow-md rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/swimpool-icon.png" alt="Icon Swimming Pool" width={70} height={70} loading="lazy"/>
                                 <p className="text-gray-600 text-sm font-semibold">{about.facilities.pool}</p>
@@ -84,10 +85,10 @@ export default function AboutUs(){
                                 <Image src="/images/icons/parking-icon.png" alt="Villa Tolping Fasilitas" width={60} height={60} loading="lazy"/>
                                 <p className="text-gray-600 text-sm font-semibold">{about.facilities.parking}</p>
                             </div>
-                            <div className="flex flex-col col-span-2 md:col-span-1 justify-center items-center shadow-md rounded-xl w-full h-35 gap-4">
+                            {/* <div className="flex flex-col col-span-2 md:col-span-1 justify-center items-center shadow-md rounded-xl w-full h-35 gap-4">
                                 <Image src="/images/icons/snowflake-icon.png" alt="Villa Tolping Fasilitas" width={60} height={60} loading="lazy"/>
                                 <p className="text-gray-600 text-sm font-semibold">{about.facilities.ac}</p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>

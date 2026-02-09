@@ -114,17 +114,17 @@ export default function Gallery() {
         }
     }
 
-     if(!mounted) {
+     if(!mounted){
         return null;
      }
      
     return(
-        <main id="gallery" className="relative isolate w-full scroll-mt-[var(--nav-height)] py-12 px-6">
+        <main id="gallery" className="relative isolate w-full md:min-h-screen scroll-mt-[var(--nav-height)] py-12 px-6">
             <section className="max-w-6xl mx-auto flex flex-col gap-8">
                 <Badge 
                     badgeName= {mounted ? galleryTranslations.badge : ""}
                 />
-                <div className="flex flex-col gap-10 text-center">
+                <div className="flex flex-col gap-16 text-center">
                     <div className="flex flex-col text-center justify-center items-center gap-2">
                         <h2 className="w-full font-plus text-gray-500 text-xs font-medium uppercase">{mounted ? galleryTranslations.opening : ""}</h2>
                         <h3 className="font-villatolping font-medium text-black text-3xl md:text-4xl lg:text-5xl md:pb-8">{mounted ? galleryTranslations.title : ""}</h3>

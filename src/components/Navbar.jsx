@@ -42,20 +42,21 @@ export default function Navbar() {
         });
     }
 
-    // const triggerlLog = (id) => {
-    //     const section = document.getElementById(id);
+    const triggerLog = (id) => {
+        const section = document.getElementById(id);
 
-    //     if(!section){
-    //         console.log("Section not found");
-    //     }
+        if(!section){
+            console.log("Section not found");
+        }
 
-    //     console.log("Section found:", section);
-    // }
+        console.log("Section found:", section);
+    }
 
     const handleClick = (id) => {
         setIsClickFlex(false);
+        // setActiveSection(id);
         scrollToSection(id);
-        // triggerlLog(id);
+        // triggerLog(id);
 
         // Tambahkan hash ke URL tanpa reload halaman
         // window.history.pushState(null, '', `#${id}`);
@@ -85,25 +86,40 @@ export default function Navbar() {
     // }, []);
 
     useEffect(() => {
-        const sections = navItems.map(item=> document.getElementById(item.id)).filter(Boolean);
+        //trigger observer untuk section aktif
+        const initObserver = () => { 
+            const sections = navItems.map(item=> document.getElementById(item.id)).filter(Boolean);
 
-        const observer = new IntersectionObserver(
-            entries =>{
-                entries.forEach(entry => {
-                    if(entry.isIntersecting){
-                        setActiveSection(entry.target.id);
-                    }
-                })
-            },
-            {
-                root: null,
-                threshold: 0.6 //60% of the section is visible
-            }
-        );
+            if(sections.length === 0) return;
 
-        sections.forEach(section => observer.observe(section));
+            const observer = new IntersectionObserver(
+                (entries) =>{
+                    entries.forEach(entry => {
+                        if(entry.isIntersecting){
+                            setActiveSection(entry.target.id);
+                        }
+                    })
+                },
+                {
+                    // rootMargin: "-30% 0px -40% 0px",
+                    root: null,
+                    threshold: 0.6 //60% of the section is visible
+                }
+            );
 
-        return () => observer.disconnect();
+            sections.forEach(section => observer.observe(section));
+            return observer;
+        }
+
+        let observer;
+        const timeout = setTimeout(() => {
+            observer = initObserver();
+        }, 100); // Delay to ensure all sections are rendered | tunggu gallery mount
+
+        return () => {
+            clearTimeout(timeout);
+            observer?.disconnect();
+        };
     }, []);
 
     useEffect(() => {
@@ -138,7 +154,7 @@ export default function Navbar() {
         <>
             <header id="navbar" className={`w-full h-20 fixed top-0 left-0 z-50 transition-all duration-700
             ${
-                isScrolled ? "bg-white shadow-md text-black" : "bg-(--color-button)/70 md:bg-black/50 backdrop-blur-lg text-black hover:bg-white hover:text-black"
+                isScrolled ? "bg-white shadow-md text-black" : "bg-(--color-base) md:bg-black/50 backdrop-blur-lg text-black hover:bg-white hover:text-black"
             }`}
             
             onMouseEnter={() => setIsHovered(true)}
@@ -146,14 +162,19 @@ export default function Navbar() {
             >
 
                 <div className="max-w-6xl mx-auto h-full px-4 flex justify-between items-center">
-                    <a data-aos="fade-down" href="#">
-                        <Image loading="lazy" src={
-                            isScrolled ? 
-                            logoVillaBl 
-                            : 
-                            isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Bogor" width={150} height={50} className="transition-all duration-700"/>
-                    </a>
-                    <div data-aos="fade-down" className="flex flex-row gap-2 hidden md:flex">
+                    <div className="flex w-auto h-auto">
+                        <a data-aos="fade-down" href="#home" onClick={(e) => {
+                            e.preventDefault();
+                            handleClick("home");
+                        }}>
+                            <Image src={
+                                isScrolled ? 
+                                logoVillaBl 
+                                : 
+                                isHovered ? logoVillaBl : logoVillaWh} alt="Villa Tolping Bogor" width={150} height={50} className="transition-all duration-700"/>
+                        </a>
+                    </div>
+                    <div data-aos="fade-down" className="flex-row gap-2 hidden md:flex">
                         <nav ref={navRef} id="navbar-desktop" className={`right-30 font-medium space-x-4 top-6 text-sm ${isScrolled ? 'text-black' : isHovered ? 'text-black' : 'text-white'} text-center justify-center items-center transition-all duration-700`}>
                             {navItems.map(item => {
                                 const isActive = activeSection === item.id;

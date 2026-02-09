@@ -75,10 +75,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Preload critical css */}
-        <link rel="preload" href="/fonts/main.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -86,11 +82,6 @@ export default function RootLayout({ children }) {
           <AOSProvider />
           {children}
 
-          {/* Load analytics/third-party scripts with lazyOnload */}
-          <Script 
-            src="https://analytics.example.com/script.js" 
-            strategy="lazyOnload" 
-          />
         </LanguageProvider>
         <FAB/>
       </body>
